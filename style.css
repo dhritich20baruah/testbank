@@ -1,0 +1,200 @@
+/* Instructions page */
+.arrow{
+    color: blue;
+    font-size: 1.5em;
+  }
+  .instructionspage{
+    padding-left: 5em;
+    padding-right: 5em;
+    text-align: justify;
+  }
+  .title1{
+    font-size: 1.5em;
+    background-color: whitesmoke;
+    padding: 1.5em;
+  }
+  .title2{
+    text-align: center;
+  }
+  .title3{
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  .btndiv{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+  }
+  .btn{
+    width: 30vw;
+    text-align: center;
+    background-color: rgb(79, 224, 79);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px;
+  }
+  .btn:hover{
+    cursor: pointer;
+    background: green;
+  }
+
+  /* Question Page */
+  .questions-head{
+    font-size: 1em;
+    background-color: whitesmoke;
+    padding: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+  }
+  .profilepic img{
+      width: 5em;
+      margin: 0 1em;
+  }
+  .questionbody{
+    display: flex;
+    width: 100vw;
+  }
+  .head-info{
+      color: orange;
+      font-weight: bold;
+  }
+  #questions-img img{
+      max-width: 50vw;
+      height: auto;
+  }
+  #timer{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 0 15px;
+    border-radius: 10px;
+  }
+  .radio{
+    margin-left: 5em;
+  }
+  .leftpanel{
+    width: 50vw;
+    padding: 5em;
+  }
+  .rightpanel{
+    width: 40vw;
+    padding: 2em;
+  }
+  #save-btn{
+    background: rgb(52, 221, 52);
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    width:fit-content;
+    padding: 0.6em 1em;
+  }
+  #clear-btn{
+    font-weight: bold;
+    text-align: center;
+    width:fit-content;
+    padding: 0.5em 1em; 
+  }
+  #save-review-btn{
+    background: orange;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    width:fit-content;
+    padding: 0.6em 1em;
+  }
+  #next-review-btn{
+    background: blue;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    width:fit-content;
+    padding: 0.6em 1em;
+  }
+  #btn-group-save{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+  }
+  #btn-group-next{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+  }
+  #btn-group-next button{
+    font-weight: bold;
+    text-align: center;
+    width:fit-content;
+    padding: 0.5em 1em; 
+  }
+  .tagboard{
+    width: 30vw;
+    border: 4px dotted black;
+    padding: 0.5em;
+  }
+  
+  .tagboard ul{
+      display: flex;
+  }
+  .tagboard ul li{
+      list-style: none;
+      margin: 0 5px;
+  }
+  .notvisited{
+    width: 2.4em;
+    height: 2.4em;
+    border: 0.25px solid grey;
+    background: linear-gradient(180deg, rgb(190, 185, 185), white);
+    border-radius: 5px;
+    text-align: center;
+  }
+  .notanswered{
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background: red;
+    border-radius: 5px;  
+    text-align: center;
+    color: white;
+  }
+  .answered{
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background: rgb(52, 221, 52);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+  }
+  .review{
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background: blue;
+    border-radius: 100px;
+    text-align: center;
+    color: white;
+  }
+  .ansNreview{
+    width: 2.5em;
+    height: 2.5em;
+    border: none;
+    background: indigo;
+    border-radius: 100px;
+    text-align: center;
+    color: white;
+  }
+  #number-board{
+    width: 30vw;
+  }
+  #number-board ul{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  #number-board ul li{
+      list-style: none;
+  }
