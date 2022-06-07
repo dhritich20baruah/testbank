@@ -89,9 +89,8 @@ function next() {
     numberList.children[index].classList.add('notanswered');
     notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
     let qNum = questionNumber.innerHTML;
-    console.log(qNum)
     if (numberList.children[qNum - 1].classList.contains('notvisited')) {
-    notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
     }
 }
 
@@ -115,15 +114,12 @@ function saveNext() {
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
         numberList.children[qNum - 1].classList.add('answered');
-        next()
+        index = parseInt(questionNumber.innerText);
+        display(index)
     }
     else {
         alert("Please choose an option")
     }
-    radioBtn[0].checked = false;
-    radioBtn[1].checked = false;
-    radioBtn[2].checked = false;
-    radioBtn[3].checked = false;
 }
 
 function uncheck() {
@@ -132,7 +128,7 @@ function uncheck() {
     radioBtn[2].checked = false;
     radioBtn[3].checked = false;
     answeredCount.innerHTML = parseInt(answeredCount.innerHTML) - 1;
-    notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
+    notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
     let qNum = questionNumber.innerHTML
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('answered');
@@ -141,66 +137,104 @@ function uncheck() {
 
 function saveReview() {
     if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked) {
-        reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
+        ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
         notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
         let qNum = questionNumber.innerHTML
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
-        numberList.children[qNum - 1].classList.add('review');
-        next()
+        numberList.children[qNum - 1].classList.add('ansNreview');
+        index = parseInt(questionNumber.innerText);
+        display(index)
     }
     else {
         alert("Please choose an option")
     }
 }
 
+
 function reviewNext() {
-    ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
+    reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
     notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
     let qNum = questionNumber.innerHTML
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('notanswered');
-    numberList.children[qNum - 1].classList.add('ansNreview');
-    next()
+    numberList.children[qNum - 1].classList.add('review');
+    index = parseInt(questionNumber.innerText);
+    display(index)
 }
 //Update number board with CSS
 function gotoQuestion(q) {
+    if (numberList.children[q - 1].classList.contains('notvisited')) {
+        notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
+        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        }
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
-    numberList.children[q - 1].classList.add('notanswered')
+    numberList.children[q - 1].classList.add('notanswered');
+   
 }
 
-//Update tagboard with numbers
-function tagBoard() {
+//Evaluation of answers
+function evaluate() {
 
 }
+
+//Check if answered
 
 //Countdown
 var date1 = new Date()
 var countDownDate = new Date()
-countDownDate.setTime(date1.getTime() + (3*60*60*1000));
+countDownDate.setTime(date1.getTime() + (3 * 60 * 60 * 1000));
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+var x = setInterval(function () {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+    // Get today's date and time
+    var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = hours + ":"
-  + minutes + ":" + seconds;
+    // Display the result in the element with id="demo"
+    document.getElementById("timer").innerHTML = hours + ":"
+        + minutes + ":" + seconds;
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-  }
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
 }, 1000);
+
+//Storage
+function store(){
+    let qNum = questionNumber.innerHTML
+    let option
+    let Marks = 0
+    let score = localStorage.getItem('score')
+    for (var i=0; i<4; i++){
+        if(radioBtn[i].checked){
+            option=radioBtn[i].value
+        }
+    }
+    if (score == null){
+      scoreArr = []
+    }
+    else{
+      scoreArr = JSON.parse(Score)
+    }
+    let scoreobj = {
+      index: qNum,
+      response: option,
+      Score: Marks,
+      result: ""
+    }
+    scoreArr.push(scoreobj)
+    localStorage.setItem("score", JSON.stringify(scoreArr))
+    console.log(scoreArr)
+  }

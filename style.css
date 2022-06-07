@@ -115,15 +115,55 @@
     width:fit-content;
     padding: 0.6em 1em;
   }
+  .hide{
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+  #input-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+  }
+  #input-field input{
+    width: 200px;
+    height: 30px;
+  }
+  #key-pad{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  td{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-family: verdana;
+    border: 1px solid black;
+  }
+  td:hover{
+    color: white;
+    background: grey;
+    cursor: pointer;
+  }
   #btn-group-save{
       display: flex;
       justify-content: space-between;
       margin-bottom: 5px;
   }
+  #btn-group-save button:hover{
+    cursor: pointer;
+  }
   #btn-group-next{
       display: flex;
       justify-content: space-between;
       margin-top: 5px;
+  }
+  #btn-group-next button:hover{
+    cursor: pointer;
   }
   #btn-group-next button{
     font-weight: bold;
@@ -143,6 +183,13 @@
   .tagboard ul li{
       list-style: none;
       margin: 0 5px;
+  }
+  .tagboard>ul>li>div{
+    font-family: verdana;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .notvisited{
     width: 2.4em;
@@ -197,4 +244,14 @@
   }
   #number-board ul li{
       list-style: none;
+  }
+  #number-board ul li:hover{
+    cursor: pointer;
+  }
+  #number-list>li{
+    font-family: verdana;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
