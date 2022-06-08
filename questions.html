@@ -30,7 +30,7 @@
           <div id="query">
             <h3>Question : <span id="question-num"></span></h3>
             <div id="questions-img"></div>
-            <div id="radio-btn">
+            <div id="radio-btn" class="">
               <input type="radio" name="option" class="radio" value="A"/><label for="A"
                 >A</label
               >
@@ -46,29 +46,29 @@
             </div>
             <div id="input-response" class="hide">
               <div id="input-field">
-                <input type="number" placeholder="Enter your value" />
+                <input type="text" placeholder="Enter your value" id="input-value"/>
               </div>
               <div id="key-pad">
                 <table>
                   <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                    <td><button class="num-pad-btn">1</button></td>
+                    <td><button class="num-pad-btn">2</button></td>
+                    <td><button class="num-pad-btn">3</button></td>
                   </tr>
                   <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
+                    <td><button class="num-pad-btn">4</button></td>
+                    <td><button class="num-pad-btn">5</button></td>
+                    <td><button class="num-pad-btn">6</button></td>
                   </tr>
                   <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
+                    <td><button class="num-pad-btn">7</button></td>
+                    <td><button class="num-pad-btn">8</button></td>
+                    <td><button class="num-pad-btn">9</button></td>
                   </tr>
                   <tr>
-                    <td>.</td>
-                    <td>0</td>
-                    <td>clear</td>
+                    <td><button class="num-pad-btn">.</button></td>
+                    <td><button class="num-pad-btn">0</button></td>
+                    <td><button class="num-pad-btn">C</button></td>
                   </tr>
                 </table>
               </div>
@@ -76,7 +76,7 @@
             <hr />
           </div>
           <div id="btn-group-save">
-            <button id="save-btn" onclick="saveNext(),store()">SAVE &amp; NEXT</button>
+            <button id="save-btn" onclick="saveNext()">SAVE &amp; NEXT</button>
             <button id="clear-btn" onclick="uncheck()">CLEAR</button>
             <button id="save-review-btn" onclick="saveReview()">
               SAVE &amp; MARK FOR REVIEW
@@ -84,15 +84,7 @@
             <button id="next-review-btn" onclick="reviewNext()">
               MARK FOR REVIEW &amp; NEXT
             </button>
-          </div>
-          <hr />
-          <div id="btn-group-next">
-            <div>
-              <button onclick="prev()">&lt; &lt; BACK</button>
-              <button onclick="next()">NEXT &gt; &gt;</button>
-            </div>
-            <button>SUBMIT</button>
-          </div>
+          </div>        
         </div>
         <div id="right-panel" class="rightpanel">
           <div id="tag-board" class="tagboard">

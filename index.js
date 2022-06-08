@@ -1,59 +1,68 @@
 const questions = [
     {
+        "Number": 1,
         "question": "/images/physics/P01.JPG",
         "answer": 'C',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 2,
         "question": "/images/physics/P02.JPG",
         "answer": 'C',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 3,
         "question": "/images/physics/P03.JPG",
         "answer": 'B',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 4,
         "question": "/images/physics/P04.JPG",
         "answer": 'D',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 5,
+        "question": "/images/physics/P05.JPG",
+        "min": 0.45,
+        "max": 0.55,
+        "section": 2
+    },
+    {
+        "Number": 6,
+        "question": "/images/physics/P06.JPG",
+        "min": 7.3,
+        "max": 7.7,
+        "section": 2,
+    },
+    {
+        "Number": 7,
         "question": "/images/maths/m01.JPG",
         "answer": 'B',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 8,
         "question": "/images/maths/m02.JPG",
         "answer": 'A',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 9,
         "question": "/images/maths/m03.JPG",
         "answer": 'A',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     },
     {
+        "Number": 10,
         "question": "/images/maths/m04.JPG",
         "answer": 'C',
-        "MCQ": true,
-        "value": false,
+        "section": 1
     }
 ]
 
-//1. Timer - should start with login
-//2. tags - tag board should update with numbers and table should update with tags
-//3. Score
-//4. display
-//5. MCQ and Value evaluation
 
 let questionsImg = document.getElementById('questions-img')
 let questionNumber = document.getElementById('question-num')
@@ -79,34 +88,40 @@ function start() {
 function display(i) {
     questionsImg.innerHTML = `<img src=${questions[i].question} alt=""/>`
     questionNumber.innerText = i + 1
-}
-
-//next question
-function next() {
-    index = parseInt(questionNumber.innerText);
-    display(index)
-    numberList.children[index].classList.remove('notvisited');
-    numberList.children[index].classList.add('notanswered');
-    notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
-    let qNum = questionNumber.innerHTML;
-    if (numberList.children[qNum - 1].classList.contains('notvisited')) {
-        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+    if (questions[i].section == 1) {
+        document.getElementById('radio-btn').classList.remove('hide')
+        document.getElementById('radio-btn').classList.add('show')
+        document.getElementById('input-response').classList.add('hide')
+        document.getElementById('input-response').classList.remove('show')
+    } else if (questions[i].section == 2) {
+        document.getElementById('input-response').classList.remove('hide')
+        document.getElementById('input-response').classList.add('show')
+        document.getElementById('radio-btn').classList.add('hide')
+        document.getElementById('radio-btn').classList.remove('show')
     }
 }
 
-//prev question
-function prev() {
-    index = parseInt(questionNumber.innerText) - 2;
-    display(index);
-    let qNum = questionNumber.innerHTML;
-    if (numberList.children[qNum - 1].classList.contains('notvisited')) {
-        numberList.children[qNum - 1].classList.add('notanswered')
-    }
-}
+//Keypad
+let inputVal = document.getElementById('input-value')
+let buttons = document.getElementsByClassName('num-pad-btn')
+let screenValue = "";
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        if (buttonText == 'C') {
+            screenValue = "";
+            inputVal.value = screenValue
+        } else {
+            screenValue += buttonText;
+            inputVal.value = screenValue
+        }
 
+    })
+}
 //Tag button group
 function saveNext() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked) {
+
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value=="") {
         answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
         notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
         notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
@@ -116,6 +131,7 @@ function saveNext() {
         numberList.children[qNum - 1].classList.add('answered');
         index = parseInt(questionNumber.innerText);
         display(index)
+        store()
     }
     else {
         alert("Please choose an option")
@@ -145,6 +161,7 @@ function saveReview() {
         numberList.children[qNum - 1].classList.add('ansNreview');
         index = parseInt(questionNumber.innerText);
         display(index)
+        store()
     }
     else {
         alert("Please choose an option")
@@ -167,19 +184,12 @@ function gotoQuestion(q) {
     if (numberList.children[q - 1].classList.contains('notvisited')) {
         notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
         notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
-        }
+    }
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
     numberList.children[q - 1].classList.add('notanswered');
-   
-}
-
-//Evaluation of answers
-function evaluate() {
 
 }
-
-//Check if answered
 
 //Countdown
 var date1 = new Date()
@@ -211,30 +221,58 @@ var x = setInterval(function () {
     }
 }, 1000);
 
-//Storage
-function store(){
-    let qNum = questionNumber.innerHTML
+//Storage and evaluation
+function store() {
+    let qNum = questionNumber.innerHTML - 1
+    console.log(qNum)
     let option
     let Marks = 0
+    let result
+    let btnIndex
     let score = localStorage.getItem('score')
-    for (var i=0; i<4; i++){
-        if(radioBtn[i].checked){
-            option=radioBtn[i].value
+    if (questions[qNum - 1].section == 1) {
+        for (var i = 0; i < 4; i++) {
+            if (radioBtn[i].checked) {
+                option = radioBtn[i].value
+                btnIndex = i;
+                if (radioBtn[i].value == questions[qNum - 1].answer) {
+                    result = "CORRECT"
+                } else {
+                    result = "INCORRECT"
+                }
+            }
         }
     }
-    if (score == null){
-      scoreArr = []
+    else if (questions[qNum - 1].section == 2) {
+        option = inputVal.value
+        console.log(questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max)
+        if (questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max) {
+            result = "CORRECT"
+        } else {
+            result = "INCORRECT"
+        }
     }
-    else{
-      scoreArr = JSON.parse(Score)
+
+
+    if (score == null) {
+        scoreArr = []
+    }
+    else {
+        scoreArr = JSON.parse(score)
     }
     let scoreobj = {
-      index: qNum,
-      response: option,
-      Score: Marks,
-      result: ""
+        index: qNum,
+        btnIndex: btnIndex,
+        response: option,
+        answer: questions[qNum - 1].answer,
+        Score: Marks,
+        result: result
     }
     scoreArr.push(scoreobj)
     localStorage.setItem("score", JSON.stringify(scoreArr))
-    console.log(scoreArr)
-  }
+    console.log(scoreobj)
+    radioBtn[0].checked = false
+    radioBtn[1].checked = false
+    radioBtn[2].checked = false
+    radioBtn[3].checked = false
+}
