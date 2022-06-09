@@ -63,7 +63,6 @@ const questions = [
     }
 ]
 
-
 let questionsImg = document.getElementById('questions-img')
 let questionNumber = document.getElementById('question-num')
 let proceed = document.getElementById('proceed')
@@ -75,15 +74,34 @@ let reviewCount = document.getElementById('reviewCount')
 let ansNreviewCount = document.getElementById('ansNreviewCount')
 let numberList = document.getElementById('number-list')
 let radioBtn = document.getElementsByClassName('radio')
+let confirm = document.getElementById('confirm')
+let Marks = 0;
 let index = 0;
 let score = 0;
 
+//intialize page
 questionsImg.innerHTML = `<img src=${questions[index].question} alt=""/>`
 questionNumber.innerHTML = `${index + 1}`
 
+
+//Index page proceed button function
+function startTest(){
+    if(!confirm.checked){
+        document.getElementById('warning1').classList.remove('hide')
+    }else{
+        location.href = "/questions.html"
+    }
+}
+
+function hideWarning(){
+    document.getElementById('warning1').classList.add('hide')
+}
+
+//Starts test
 function start() {
     display(index)
 }
+
 //Display questions
 function display(i) {
     questionsImg.innerHTML = `<img src=${questions[i].question} alt=""/>`
@@ -119,16 +137,20 @@ for (item of buttons) {
     })
 }
 //Tag button group
-function saveNext() {
 
+//Save and next
+function saveNext() {
     if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value=="") {
         answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
         notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
-        notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
+        if(notansweredCount.innerHTML>0){
+            notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
+        }
         let qNum = questionNumber.innerHTML
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
         numberList.children[qNum - 1].classList.add('answered');
+        numberList.children[qNum].classList.add('notanswered');
         index = parseInt(questionNumber.innerText);
         display(index)
         store()
@@ -138,6 +160,7 @@ function saveNext() {
     }
 }
 
+//CLEAR
 function uncheck() {
     radioBtn[0].checked = false;
     radioBtn[1].checked = false;
@@ -151,6 +174,7 @@ function uncheck() {
     numberList.children[qNum - 1].classList.add('notanswered');
 }
 
+//Save and mark for review
 function saveReview() {
     if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked) {
         ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
@@ -159,6 +183,7 @@ function saveReview() {
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
         numberList.children[qNum - 1].classList.add('ansNreview');
+        numberList.children[qNum].classList.add('notanswered');
         index = parseInt(questionNumber.innerText);
         display(index)
         store()
@@ -168,7 +193,7 @@ function saveReview() {
     }
 }
 
-
+//Mark for review and next
 function reviewNext() {
     reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
     notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
@@ -176,6 +201,7 @@ function reviewNext() {
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('notanswered');
     numberList.children[qNum - 1].classList.add('review');
+    numberList.children[qNum].classList.add('notanswered');
     index = parseInt(questionNumber.innerText);
     display(index)
 }
@@ -188,7 +214,6 @@ function gotoQuestion(q) {
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
     numberList.children[q - 1].classList.add('notanswered');
-
 }
 
 //Countdown
@@ -226,7 +251,6 @@ function store() {
     let qNum = questionNumber.innerHTML - 1
     console.log(qNum)
     let option
-    let Marks = 0
     let result
     let btnIndex
     let score = localStorage.getItem('score')
@@ -237,8 +261,10 @@ function store() {
                 btnIndex = i;
                 if (radioBtn[i].value == questions[qNum - 1].answer) {
                     result = "CORRECT"
+                    Marks += 4
                 } else {
                     result = "INCORRECT"
+                    Marks -= 1
                 }
             }
         }
@@ -248,8 +274,10 @@ function store() {
         console.log(questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max)
         if (questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max) {
             result = "CORRECT"
+            Marks += 4
         } else {
             result = "INCORRECT"
+            Marks -= 1
         }
     }
 
@@ -270,7 +298,7 @@ function store() {
     }
     scoreArr.push(scoreobj)
     localStorage.setItem("score", JSON.stringify(scoreArr))
-    console.log(scoreobj)
+    console.log(localStorage.getItem("score"))
     radioBtn[0].checked = false
     radioBtn[1].checked = false
     radioBtn[2].checked = false
