@@ -68,16 +68,22 @@
         <p>Please note all questions will appear in your default language. This language can be changed for a particular question later on.</p>
         <hr />
         <p>
-            <input type="checkbox" name="confirm" id="confirm" />
+            <input type="checkbox" id="confirm"/>
             I have read and understood the instructions. All computer hardware allotted to me are in proper working condition. I declare that I am not in possession of / not wearing / not carrying any prohibited gadget like mobile phone, bluetooth devices etc. /any prohibited material with me into the Examination Hall.I agree that in case of not adhering to the instructions, I shall be liable to be debarred from this Test and/or to disciplinary action, which may include ban from future Tests / Examinations.
         </p>
         <hr />
         <div class="btndiv">
-            <a href="/questions.html">
-            <button class="btn" id="proceed">PROCEED</button>
-            </a>
+            <!-- <a href="/questions.html"> -->
+            <button class="btn" id="proceed" onclick="startTest()">PROCEED</button>
+            <!-- </a> -->
+        </div>
+        <div class="hide" id="warning1">
+            <h1>Warning</h1>
+            <h3>Please accept the terms and conditions before proceeding.</h3>
+            <button id="warning-ok" onclick="hideWarning()">OK</button>
         </div>
     </div>
-</div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
