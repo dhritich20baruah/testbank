@@ -25,42 +25,208 @@ const questions = [
     },
     {
         "Number": 5,
+        "question": "/images/physics/P17.JPG",
+        "answer": 'B',
+        "section": 1
+    },
+    {
+        "Number": 21,
         "question": "/images/physics/P05.JPG",
+        "answer": "0.45 - 0.55",
         "min": 0.45,
         "max": 0.55,
         "section": 2
     },
     {
-        "Number": 6,
+        "Number": 22,
         "question": "/images/physics/P06.JPG",
+        "answer": "7.3 - 7.7",
         "min": 7.3,
         "max": 7.7,
         "section": 2,
     },
     {
-        "Number": 7,
+        "Number": 23,
+        "question": "/images/physics/P07.JPG",
+        "answer": "1.3 - 1.4",
+        "min": 1.3,
+        "max": 1.4,
+        "section": 2,
+    },
+    {
+        "Number": 24,
+        "question": "/images/physics/P08.JPG",
+        "answer": "0.6 - 0.72",
+        "min": 0.6,
+        "max": 0.72,
+        "section": 2,
+    },
+    {
+        "Number": 25,
+        "question": "/images/physics/P09.JPG",
+        "answer": "1.7 - 1.8",
+        "min": 1.7,
+        "max": 1.8,
+        "section": 2,
+    },
+    {
+        "Number": 26,
         "question": "/images/maths/m01.JPG",
         "answer": 'B',
         "section": 1
     },
     {
-        "Number": 8,
+        "Number": 27,
         "question": "/images/maths/m02.JPG",
         "answer": 'A',
         "section": 1
     },
     {
-        "Number": 9,
+        "Number": 28,
         "question": "/images/maths/m03.JPG",
         "answer": 'A',
         "section": 1
     },
     {
-        "Number": 10,
+        "Number": 29,
         "question": "/images/maths/m04.JPG",
         "answer": 'C',
         "section": 1
-    }
+    },
+    {
+        "Number": 30,
+        "question": "/images/maths/M17.JPG",
+        "answer": 'B',
+        "section": 1
+    },
+    {
+        "Number": 31,
+        "question": "/images/maths/M18.JPG",
+        "answer": 'C',
+        "section": 1
+    },
+    {
+        "Number": 32,
+        "question": "/images/maths/M19.JPG",
+        "answer": 'C',
+        "section": 1
+    },
+    {
+        "Number": 46,
+        "question": "/images/maths/m05.JPG",
+        "answer": "76.1-76.4",
+        "min": 76.1,
+        "max": 76.4,
+        "section": 2,
+    },
+    {
+        "Number": 47,
+        "question": "/images/maths/m06.JPG",
+        "answer": "24.4-24.6",
+        "min": 24.4,
+        "max": 24.6,
+        "section": 2,
+    },
+    {
+        "Number": 48,
+        "question": "/images/maths/m07.JPG",
+        "answer": "0.95-1.05",
+        "min": 0.95,
+        "max": 1.05,
+        "section": 2,
+    },
+    {
+        "Number": 49,
+        "question": "/images/maths/m08.JPG",
+        "answer": "1.45-1.55",
+        "min": 1.45,
+        "max": 1.55,
+        "section": 2,
+    },
+    {
+        "Number": 50,
+        "question": "/images/maths/m09.JPG",
+        "answer": "8.95-9.05",
+        "min": 8.95,
+        "max": 9.05,
+        "section": 2,
+    },
+    {
+        "Number": 51,
+        "question": "/images/chemistry/C01.JPG",
+        "answer": 'B',
+        "section": 1
+    },
+    {
+        "Number": 52,
+        "question": "/images/chemistry/C02.JPG",
+        "answer": 'B',
+        "section": 1
+    },
+    {
+        "Number": 53,
+        "question": "/images/chemistry/C03.JPG",
+        "answer": 'B',
+        "section": 1
+    },
+    {
+        "Number": 54,
+        "question": "/images/chemistry/C04.JPG",
+        "answer": 'A',
+        "section": 1
+    },
+    {
+        "Number": 55,
+        "question": "/images/chemistry/C18.JPG",
+        "answer": 'A',
+        "section": 1
+    },
+    {
+        "Number": 56,
+        "question": "/images/chemistry/C19.JPG",
+        "answer": 'C',
+        "section": 1
+    },
+    {
+        "Number": 71,
+        "question": "/images/chemistry/C05.JPG",
+        "answer": "1.60-1.64",
+        "min": 1.60,
+        "max": 1.64,
+        "section": 2,
+    },
+    {
+        "Number": 72,
+        "question": "/images/chemistry/C07.JPG",
+        "answer": "166.2-166.3",
+        "min": 166.2,
+        "max": 166.3,
+        "section": 2,
+    },
+    {
+        "Number": 73,
+        "question": "/images/chemistry/C08.JPG",
+        "answer": "141-142",
+        "min": 141,
+        "max": 142,
+        "section": 2,
+    },
+    {
+        "Number": 74,
+        "question": "/images/chemistry/C09.JPG",
+        "answer": "100.1-100.3",
+        "min": 100.1,
+        "max": 100.3,
+        "section": 2,
+    },
+    {
+        "Number": 75,
+        "question": "/images/chemistry/C10.JPG",
+        "answer": "2.2-2.7",
+        "min": 2.2,
+        "max": 2.7,
+        "section": 2,
+    },
 ]
 
 let questionsImg = document.getElementById('questions-img')
@@ -85,15 +251,15 @@ questionNumber.innerHTML = `${index + 1}`
 
 
 //Index page proceed button function
-function startTest(){
-    if(!confirm.checked){
+function startTest() {
+    if (!confirm.checked) {
         document.getElementById('warning1').classList.remove('hide')
-    }else{
+    } else {
         location.href = "/questions.html"
     }
 }
 
-function hideWarning(){
+function hideWarning() {
     document.getElementById('warning1').classList.add('hide')
 }
 
@@ -140,13 +306,17 @@ for (item of buttons) {
 
 //Save and next
 function saveNext() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value=="") {
-        answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
+        let qNum = questionNumber.innerHTML
+        if (!numberList.children[qNum - 1].classList.contains('answered')) {
+            answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
+        }
         notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
-        if(notansweredCount.innerHTML>0){
+
+
+        if (notansweredCount.innerHTML > 0) {
             notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
         }
-        let qNum = questionNumber.innerHTML
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
         numberList.children[qNum - 1].classList.add('answered');
@@ -214,6 +384,19 @@ function gotoQuestion(q) {
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
     numberList.children[q - 1].classList.add('notanswered');
+
+    let score = localStorage.getItem('score')
+    scoreArr = JSON.parse(score)
+
+    for (var i = 0; i < scoreArr.length; i++) {
+        if (scoreArr[i].index == q) {
+            console.log(scoreArr[i].index == q)
+            radioBtn[scoreArr[i].btnIndex].checked = true
+        } else {
+            radioBtn[scoreArr[i].btnIndex].checked = false
+        }
+    }
+
 }
 
 //Countdown
@@ -249,7 +432,7 @@ var x = setInterval(function () {
 //Storage and evaluation
 function store() {
     let qNum = questionNumber.innerHTML - 1
-    console.log(qNum)
+
     let option
     let result
     let btnIndex
@@ -271,8 +454,8 @@ function store() {
     }
     else if (questions[qNum - 1].section == 2) {
         option = inputVal.value
-        console.log(questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max)
-        if (questions[qNum - 1].min<parseFloat(inputVal.value) && parseFloat(inputVal.value)<questions[qNum - 1].max) {
+
+        if (questions[qNum - 1].min < parseFloat(inputVal.value) && parseFloat(inputVal.value) < questions[qNum - 1].max) {
             result = "CORRECT"
             Marks += 4
         } else {
@@ -280,7 +463,6 @@ function store() {
             Marks -= 1
         }
     }
-
 
     if (score == null) {
         scoreArr = []
@@ -298,9 +480,10 @@ function store() {
     }
     scoreArr.push(scoreobj)
     localStorage.setItem("score", JSON.stringify(scoreArr))
-    console.log(localStorage.getItem("score"))
+    // console.log(localStorage.getItem('score'))
     radioBtn[0].checked = false
     radioBtn[1].checked = false
     radioBtn[2].checked = false
     radioBtn[3].checked = false
+    inputVal.value = ""
 }
