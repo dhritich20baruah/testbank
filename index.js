@@ -244,6 +244,16 @@ let confirm = document.getElementById('confirm')
 let Marks = 0;
 let index = 0;
 let score = 0;
+let btnIndex = 4
+let response, result
+
+//Set up a temporary array of questions
+//append or modify the temp array according to the responses
+//when test is over delete or revert that array
+
+let tempArr = []
+tempArr = questions.map(elem => ({ ...elem, btnIndex: btnIndex, response: response, result: result }))
+
 
 //intialize page
 questionsImg.innerHTML = `<img src=${questions[index].question} alt=""/>`
@@ -342,6 +352,15 @@ function uncheck() {
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('answered');
     numberList.children[qNum - 1].classList.add('notanswered');
+    let score = localStorage.getItem('score')
+    if (score == null) {
+        scoreArr = []
+    }
+    else {
+        scoreArr = JSON.parse(score)
+    }
+    console.log(scoreArr)
+
 }
 
 //Save and mark for review
@@ -375,6 +394,8 @@ function reviewNext() {
     index = parseInt(questionNumber.innerText);
     display(index)
 }
+
+
 //Update number board with CSS
 function gotoQuestion(q) {
     if (numberList.children[q - 1].classList.contains('notvisited')) {
@@ -384,18 +405,8 @@ function gotoQuestion(q) {
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
     numberList.children[q - 1].classList.add('notanswered');
-
-    let score = localStorage.getItem('score')
-    scoreArr = JSON.parse(score)
-
-    for (var i = 0; i < scoreArr.length; i++) {
-        if (scoreArr[i].index == q) {
-            console.log(scoreArr[i].index == q)
-            radioBtn[scoreArr[i].btnIndex].checked = true
-        } else {
-            radioBtn[scoreArr[i].btnIndex].checked = false
-        }
-    }
+    console.log(tempArr[q - 1].btnIndex)
+    radioBtn[tempArr[q - 1].btnIndex].checked = true
 
 }
 
@@ -426,6 +437,9 @@ var x = setInterval(function () {
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "EXPIRED";
+        document.getElementById('questionDisplay').classList.add('hide');
+        document.getElementById('scoreboard').classList.remove('hide')
+        document.getElementById('scoreboard').classList.add('show')
     }
 }, 1000);
 
@@ -433,57 +447,65 @@ var x = setInterval(function () {
 function store() {
     let qNum = questionNumber.innerHTML - 1
 
-    let option
-    let result
-    let btnIndex
-    let score = localStorage.getItem('score')
     if (questions[qNum - 1].section == 1) {
         for (var i = 0; i < 4; i++) {
             if (radioBtn[i].checked) {
-                option = radioBtn[i].value
-                btnIndex = i;
+                tempArr[qNum - 1].response = radioBtn[i].value
+                tempArr[qNum - 1].btnIndex = i;
                 if (radioBtn[i].value == questions[qNum - 1].answer) {
-                    result = "CORRECT"
+                    tempArr[qNum - 1].result = "CORRECT"
                     Marks += 4
                 } else {
-                    result = "INCORRECT"
+                    tempArr[qNum - 1].result = "INCORRECT"
                     Marks -= 1
                 }
             }
         }
     }
     else if (questions[qNum - 1].section == 2) {
-        option = inputVal.value
+        tempArr[qNum - 1].response = inputVal.value
 
         if (questions[qNum - 1].min < parseFloat(inputVal.value) && parseFloat(inputVal.value) < questions[qNum - 1].max) {
-            result = "CORRECT"
+            tempArr[qNum - 1].result = "CORRECT"
             Marks += 4
         } else {
-            result = "INCORRECT"
+            tempArr[qNum - 1].result = "INCORRECT"
             Marks -= 1
         }
     }
 
-    if (score == null) {
-        scoreArr = []
-    }
-    else {
-        scoreArr = JSON.parse(score)
-    }
-    let scoreobj = {
-        index: qNum,
-        btnIndex: btnIndex,
-        response: option,
-        answer: questions[qNum - 1].answer,
-        Score: Marks,
-        result: result
-    }
-    scoreArr.push(scoreobj)
-    localStorage.setItem("score", JSON.stringify(scoreArr))
-    // console.log(localStorage.getItem('score'))
+    let html = ""
+    tempArr.forEach(function (element) {
+        html += `
+        <h2>Question No.: ${element.Number}</h2>
+        <div><img src=${element.question} alt=""></div>
+        <p>Your Response:${element.response} 
+            <br>
+           Answer:${element.answer}
+           <br>
+           Result:${element.result}
+        </p>
+        `
+    })
+
+    var scorelist = document.getElementById('scorelist')
+    scorelist.innerHTML = html
+
+    document.getElementById('marksDisplay').innerText = `${Marks}`
+
     radioBtn[0].checked = false
     radioBtn[1].checked = false
     radioBtn[2].checked = false
     radioBtn[3].checked = false
     inputVal.value = ""
 }
+
+//Display scorecard
+function scorecard() {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+    document.getElementById('questionDisplay').classList.add('hide');
+    document.getElementById('scoreboard').classList.remove('hide')
+    document.getElementById('scoreboard').classList.add('show')
+}
+

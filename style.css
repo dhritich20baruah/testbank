@@ -108,6 +108,46 @@ body{
     padding: 1em;
     background-color: wheat;
   }
+  @media (max-width: 450px){
+    .questions-head{
+      width: 100vw;
+    }
+    .questionbody{
+      display: flex;
+      flex-direction: column;
+    }
+    .leftpanel{
+      width: 100vw;
+      padding: 1em 1em;
+    }
+    #right-panel{
+      width: 100vw
+    }
+    .tagboard{
+      width: 100vw;
+    }
+    #number-board{
+      width: 90vw;
+      height: 50vh;
+      overflow: auto;
+      background-color: beige;
+    }
+    #input-field{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    #input-field input{
+      max-width: 90vw;
+    }   
+    #questions-img img{
+      max-width: 90vw;
+      height: auto;
+  } 
+  .radio{
+    margin-left: 2em;
+  }
+  }
   #save-btn{
     background: rgb(52, 221, 52);
     color:white;
@@ -154,7 +194,7 @@ body{
     margin: 10px;
   }
   #input-field input{
-    width: 200px;
+    max-width: 200px;
     height: 30px;
   }
   #key-pad{
@@ -178,13 +218,13 @@ body{
   #btn-group-save{
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin: 1em;
   }
   #btn-group-save button:hover{
     cursor: pointer;
   }
-  .tagboard{
-    width: 25vw;
+  .tagboard{  
     padding: 0.5em;
   }
   
@@ -246,8 +286,7 @@ body{
     text-align: center;
     color: white;
   }
-  #number-board{
-    width: 25vw;
+  #number-board{ 
     height: 50vh;
     overflow: auto;
     background-color: beige;
@@ -270,3 +309,18 @@ body{
     flex-direction: column;
     justify-content: center;
   }
+  #scorelist img{
+    max-width: 70vw;
+    height: auto;
+  }
+  #scoreboard{
+    margin-left: 5em;
+  }
+  #GoHome{
+    width: 5em;
+    height: 3em;
+    background: red;
+    color: white;
+    border: none;
+  }
+

@@ -8,45 +8,62 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <div class="questions-head">
-        <div class="profilepic">
-          <img src="/images/profilepic.png" alt="" />
-        </div>
-        <div class="profileinfo">
-          Candidate Name: <span class="head-info">[Your Name]</span>
-          <br />
-          Exam Name :<span class="head-info">JEE-Main</span>
-          <br />
-          Subject Name:<span class="head-info"
-            >40503627_BTECH 20th June 2022</span
-          >
-          <br />
-          Remaining Time: <span id="timer"></span>
-        </div>
+    <div class="questions-head">
+      <div class="profilepic">
+        <img src="/images/profilepic.png" alt="" />
       </div>
+      <div class="profileinfo">
+        Candidate Name: <span class="head-info">[Your Name]</span>
+        <br />
+        Exam Name :<span class="head-info">JEE-Main</span>
+        <br />
+        Subject Name:<span class="head-info"
+          >40503627_BTECH 20th June 2022</span
+        >
+        <br />
+        Remaining Time: <span id="timer"></span>
+      </div>
+    </div>
+    <div id="questionDisplay">
+    
       <div id="questionbody" class="questionbody">
         <div id="left-panel" class="leftpanel">
           <div id="query">
             <h3>Question : <span id="question-num"></span></h3>
             <div id="questions-img"></div>
             <div id="radio-btn" class="">
-              <input type="radio" name="option" class="radio" value="A"/><label for="A"
+              <input type="radio" name="option" class="radio" value="A" /><label
+                for="A"
                 >A</label
               >
-              <input type="radio" name="option" class="radio" value="B"/><label for="B"
+              <input type="radio" name="option" class="radio" value="B" /><label
+                for="B"
                 >B</label
               >
-              <input type="radio" name="option" class="radio" value="C"/><label for="C"
+              <input type="radio" name="option" class="radio" value="C" /><label
+                for="C"
                 >C</label
               >
-              <input type="radio" name="option" class="radio" value="D"/><label for="D"
+              <input type="radio" name="option" class="radio" value="D" /><label
+                for="D"
                 >D</label
               >
+              <input
+                type="radio"
+                name="option"
+                class="radio"
+                value="E"
+                checked
+                style="display: none"
+              /><label for="E" style="display: none">E</label>
             </div>
             <div id="input-response" class="hide">
               <div id="input-field">
-                <input type="text" placeholder="Enter your value" id="input-value"/>
+                <input
+                  type="text"
+                  placeholder="Enter your value"
+                  id="input-value"
+                />
               </div>
               <div id="key-pad">
                 <table>
@@ -84,7 +101,7 @@
             <button id="next-review-btn" onclick="reviewNext()">
               MARK FOR REVIEW &amp; NEXT
             </button>
-          </div>        
+          </div>
         </div>
         <div id="right-panel" class="rightpanel">
           <div id="tag-board" class="tagboard">
@@ -199,8 +216,16 @@
           </div>
         </div>
       </div>
+      <button onclick="scorecard()" id="save-btn">Submit</button>
     </div>
-    <a href="/scoreboard.html"><button>score</button></a>
+    
+
+    <div id="scoreboard" class="hide">
+      <h1>Your scorecard</h1>
+      <p>Marks scored: <span id="marksDisplay"></span></p>
+      <a href="/"><button id="GoHome">HOME</button></a>
+      <div id="scorelist"></div>
+    </div>
   </body>
   <script src="index.js"></script>
 </html>

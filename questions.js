@@ -243,6 +243,7 @@ questions.forEach(element => {
     let tableobj = {
         index: element.Number,
         answer: element.answer,
+        response: "",
         section: element.section
     }
     tableArr.push(tableobj)  
@@ -251,3 +252,20 @@ questions.forEach(element => {
 localStorage.setItem("table", JSON.stringify(tableArr))
 console.log(localStorage.getItem('table'))
 
+
+// if (score == null) {
+//     scoreArr = []
+// }
+// else {
+//     scoreArr = JSON.parse(score)
+// }
+// let scoreobj = {
+//     index: qNum,
+//     btnIndex: btnIndex,
+//     response: option,
+//     answer: questions[qNum - 1].answer,
+//     Score: Marks,
+//     result: result
+// }
+// scoreArr.push(scoreobj)
+// localStorage.setItem("score", JSON.stringify(scoreArr))
