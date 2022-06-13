@@ -1,230 +1,542 @@
 const questions = [
     {
         "Number": 1,
-        "question": "/images/physics/P01.JPG",
-        "answer": 'C',
+        "question": "2021_1/Q01.JPG",
+        "answer": '4',
         "section": 1
     },
     {
         "Number": 2,
-        "question": "/images/physics/P02.JPG",
-        "answer": 'C',
+        "question": "2021_1/Q02.JPG",
+        "answer": '2',
         "section": 1
     },
     {
         "Number": 3,
-        "question": "/images/physics/P03.JPG",
-        "answer": 'B',
+        "question": "2021_1/Q03.JPG",
+        "answer": '4',
         "section": 1
     },
     {
         "Number": 4,
-        "question": "/images/physics/P04.JPG",
-        "answer": 'D',
+        "question": "2021_1/Q04.JPG",
+        "answer": '1',
         "section": 1
     },
     {
         "Number": 5,
-        "question": "/images/physics/P17.JPG",
-        "answer": 'B',
+        "question": "2021_1/Q05.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 6,
+        "question": "2021_1/Q06.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 7,
+        "question": "2021_1/Q07.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 8,
+        "question": "2021_1/Q08.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 9,
+        "question": "2021_1/Q09.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 10,
+        "question": "2021_1/Q10.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 11,
+        "question": "2021_1/Q11.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 12,
+        "question": "2021_1/Q12.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 13,
+        "question": "2021_1/Q13.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 14,
+        "question": "2021_1/Q14.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 15,
+        "question": "2021_1/Q15.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 16,
+        "question": "2021_1/Q16.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 17,
+        "question": "2021_1/Q17.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 18,
+        "question": "2021_1/Q18.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 19,
+        "question": "2021_1/Q19.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 20,
+        "question": "2021_1/Q20.JPG",
+        "answer": '4',
         "section": 1
     },
     {
         "Number": 21,
-        "question": "/images/physics/P05.JPG",
-        "answer": "0.45 - 0.55",
-        "min": 0.45,
-        "max": 0.55,
-        "section": 2
+        "question": "2021_1/Q21.JPG",
+        "answer": "1",
+        "section": 2,
     },
     {
         "Number": 22,
-        "question": "/images/physics/P06.JPG",
-        "answer": "7.3 - 7.7",
-        "min": 7.3,
-        "max": 7.7,
+        "question": "2021_1/Q22.JPG",
+        "answer": "440",
         "section": 2,
     },
     {
         "Number": 23,
-        "question": "/images/physics/P07.JPG",
-        "answer": "1.3 - 1.4",
-        "min": 1.3,
-        "max": 1.4,
+        "question": "2021_1/Q23.JPG",
+        "answer": "25",
         "section": 2,
     },
     {
         "Number": 24,
-        "question": "/images/physics/P08.JPG",
-        "answer": "0.6 - 0.72",
-        "min": 0.6,
-        "max": 0.72,
+        "question": "2021_1/Q24.JPG",
+        "answer": "75",
         "section": 2,
     },
     {
         "Number": 25,
-        "question": "/images/physics/P09.JPG",
-        "answer": "1.7 - 1.8",
-        "min": 1.7,
-        "max": 1.8,
+        "question": "2021_1/Q25.JPG",
+        "answer": "25600",
         "section": 2,
     },
     {
         "Number": 26,
-        "question": "/images/maths/m01.JPG",
-        "answer": 'B',
-        "section": 1
+        "question": "2021_1/Q26.JPG",
+        "answer": "200",
+        "section": 2,
     },
     {
         "Number": 27,
-        "question": "/images/maths/m02.JPG",
-        "answer": 'A',
-        "section": 1
+        "question": "2021_1/Q27.JPG",
+        "answer": "15",
+        "section": 2,
     },
     {
         "Number": 28,
-        "question": "/images/maths/m03.JPG",
-        "answer": 'A',
-        "section": 1
+        "question": "2021_1/Q28.JPG",
+        "answer": "25",
+        "section": 2,
     },
     {
         "Number": 29,
-        "question": "/images/maths/m04.JPG",
-        "answer": 'C',
-        "section": 1
+        "question": "2021_1/Q29.JPG",
+        "answer": "25",
+        "section": 2,
     },
     {
         "Number": 30,
-        "question": "/images/maths/M17.JPG",
-        "answer": 'B',
-        "section": 1
+        "question": "2021_1/Q30.JPG",
+        "answer": "25",
+        "section": 2,
     },
     {
         "Number": 31,
-        "question": "/images/maths/M18.JPG",
-        "answer": 'C',
+        "question": "2021_1/Q31.JPG",
+        "answer": '3',
         "section": 1
     },
     {
         "Number": 32,
-        "question": "/images/maths/M19.JPG",
-        "answer": 'C',
+        "question": "2021_1/Q32.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 33,
+        "question": "2021_1/Q33.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 34,
+        "question": "2021_1/Q34.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 35,
+        "question": "2021_1/Q35.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 36,
+        "question": "2021_1/Q36.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 37,
+        "question": "2021_1/Q37.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 38,
+        "question": "2021_1/Q36.JPG",
+        "answer": "3",
+        "section": 1,
+    },
+    {
+        "Number": 39,
+        "question": "2021_1/Q39.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 40,
+        "question": "2021_1/Q40.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 41,
+        "question": "2021_1/Q41.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 42,
+        "question": "2021_1/Q42.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 43,
+        "question": "2021_1/Q43.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 44,
+        "question": "2021_1/Q44.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 45,
+        "question": "2021_1/Q45.JPG",
+        "answer": '1',
         "section": 1
     },
     {
         "Number": 46,
-        "question": "/images/maths/m05.JPG",
-        "answer": "76.1-76.4",
-        "min": 76.1,
-        "max": 76.4,
-        "section": 2,
+        "question": "2021_1/Q46.JPG",
+        "answer": '1',
+        "section": 1
     },
     {
         "Number": 47,
-        "question": "/images/maths/m06.JPG",
-        "answer": "24.4-24.6",
-        "min": 24.4,
-        "max": 24.6,
-        "section": 2,
+        "question": "2021_1/Q47.JPG",
+        "answer": '4',
+        "section": 1
     },
     {
         "Number": 48,
-        "question": "/images/maths/m07.JPG",
-        "answer": "0.95-1.05",
-        "min": 0.95,
-        "max": 1.05,
-        "section": 2,
+        "question": "2021_1/Q48.JPG",
+        "answer": '2',
+        "section": 1
     },
     {
         "Number": 49,
-        "question": "/images/maths/m08.JPG",
-        "answer": "1.45-1.55",
-        "min": 1.45,
-        "max": 1.55,
-        "section": 2,
+        "question": "2021_1/Q49.JPG",
+        "answer": '3',
+        "section": 1
     },
     {
         "Number": 50,
-        "question": "/images/maths/m09.JPG",
-        "answer": "8.95-9.05",
-        "min": 8.95,
-        "max": 9.05,
-        "section": 2,
+        "question": "2021_1/Q50.JPG",
+        "answer": '3',
+        "section": 1
     },
     {
         "Number": 51,
-        "question": "/images/chemistry/C01.JPG",
-        "answer": 'B',
-        "section": 1
+        "question": "2021_1/Q51.JPG",
+        "answer": "2",
+        "section": 2,
     },
     {
         "Number": 52,
-        "question": "/images/chemistry/C02.JPG",
-        "answer": 'B',
-        "section": 1
+        "question": "2021_1/Q52.JPG",
+        "answer": "12",
+        "section": 2,
     },
     {
         "Number": 53,
-        "question": "/images/chemistry/C03.JPG",
-        "answer": 'B',
-        "section": 1
+        "question": "2021_1/Q53.JPG",
+        "answer": "5",
+        "section": 2,
     },
     {
         "Number": 54,
-        "question": "/images/chemistry/C04.JPG",
-        "answer": 'A',
-        "section": 1
+        "question": "2021_1/Q54.JPG",
+        "answer": "1",
+        "section": 2,
     },
     {
         "Number": 55,
-        "question": "/images/chemistry/C18.JPG",
-        "answer": 'A',
-        "section": 1
+        "question": "2021_1/Q55.JPG",
+        "answer": "2",
+        "section": 2,
     },
     {
         "Number": 56,
-        "question": "/images/chemistry/C19.JPG",
-        "answer": 'C',
+        "question": "2021_1/Q56.JPG",
+        "answer": "12",
+        "section": 2,
+    },
+    {
+        "Number": 57,
+        "question": "2021_1/Q57.JPG",
+        "answer": "5",
+        "section": 2,
+    },
+    {
+        "Number": 58,
+        "question": "2021_1/Q58.JPG",
+        "answer": "7.5",
+        "section": 2,
+    },
+    {
+        "Number": 59,
+        "question": "2021_1/Q59.JPG",
+        "answer": "26",
+        "section": 2,
+    },
+    {
+        "Number": 60,
+        "question": "2021_1/Q60.JPG",
+        "answer": "8",
+        "section": 2,
+    },
+    {
+        "Number": 61,
+        "question": "2021_1/Q61.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 62,
+        "question": "2021_1/Q62.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 63,
+        "question": "2021_1/Q63.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 64,
+        "question": "2021_1/Q64.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 65,
+        "question": "2021_1/Q65.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 66,
+        "question": "2021_1/Q66.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 67,
+        "question": "2021_1/Q67.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 68,
+        "question": "2021_1/Q66.JPG",
+        "answer": "1",
+        "section": 1,
+    },
+    {
+        "Number": 69,
+        "question": "2021_1/Q69.JPG",
+        "answer": '2',
+        "section": 1
+    },
+    {
+        "Number": 70,
+        "question": "2021_1/Q70.JPG",
+        "answer": '1',
         "section": 1
     },
     {
         "Number": 71,
-        "question": "/images/chemistry/C05.JPG",
-        "answer": "1.60-1.64",
-        "min": 1.60,
-        "max": 1.64,
-        "section": 2,
+        "question": "2021_1/Q71.JPG",
+        "answer": '2',
+        "section": 1
     },
     {
         "Number": 72,
-        "question": "/images/chemistry/C07.JPG",
-        "answer": "166.2-166.3",
-        "min": 166.2,
-        "max": 166.3,
-        "section": 2,
+        "question": "2021_1/Q72.JPG",
+        "answer": '4',
+        "section": 1
     },
     {
         "Number": 73,
-        "question": "/images/chemistry/C08.JPG",
-        "answer": "141-142",
-        "min": 141,
-        "max": 142,
-        "section": 2,
+        "question": "2021_1/Q73.JPG",
+        "answer": '3',
+        "section": 1
     },
     {
         "Number": 74,
-        "question": "/images/chemistry/C09.JPG",
-        "answer": "100.1-100.3",
-        "min": 100.1,
-        "max": 100.3,
-        "section": 2,
+        "question": "2021_1/Q74.JPG",
+        "answer": '2',
+        "section": 1
     },
     {
         "Number": 75,
-        "question": "/images/chemistry/C10.JPG",
-        "answer": "2.2-2.7",
-        "min": 2.2,
-        "max": 2.7,
+        "question": "2021_1/Q75.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 76,
+        "question": "2021_1/Q76.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 77,
+        "question": "2021_1/Q77.JPG",
+        "answer": '3',
+        "section": 1
+    },
+    {
+        "Number": 78,
+        "question": "2021_1/Q78.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 79,
+        "question": "2021_1/Q79.JPG",
+        "answer": '4',
+        "section": 1
+    },
+    {
+        "Number": 80,
+        "question": "2021_1/Q80.JPG",
+        "answer": '1',
+        "section": 1
+    },
+    {
+        "Number": 81,
+        "question": "2021_1/Q81.JPG",
+        "answer": "3",
+        "section": 2,
+    },
+    {
+        "Number": 82,
+        "question": "2021_1/Q82.JPG",
+        "answer": "9",
+        "section": 2,
+    },
+    {
+        "Number": 83,
+        "question": "2021_1/Q83.JPG",
+        "answer": "75",
+        "section": 2,
+    },
+    {
+        "Number": 84,
+        "question": "2021_1/Q84.JPG",
+        "answer": "3",
+        "section": 2,
+    },
+    {
+        "Number": 85,
+        "question": "2021_1/Q85.JPG",
+        "answer": "17",
+        "section": 2,
+    },
+    {
+        "Number": 86,
+        "question": "2021_1/Q86.JPG",
+        "answer": "6",
+        "section": 2,
+    },
+    {
+        "Number": 87,
+        "question": "2021_1/Q87.JPG",
+        "answer": "5",
+        "section": 2,
+    },
+    {
+        "Number": 88,
+        "question": "2021_1/Q88.JPG",
+        "answer": "10",
+        "section": 2,
+    },
+    {
+        "Number": 89,
+        "question": "2021_1/Q89.JPG",
+        "answer": "540",
+        "section": 2,
+    },
+    {
+        "Number": 90,
+        "question": "2021_1/Q90.JPG",
+        "answer": "1",
         "section": 2,
     },
 ]
@@ -265,7 +577,7 @@ function startTest() {
     if (!confirm.checked) {
         document.getElementById('warning1').classList.remove('hide')
     } else {
-        location.href = "/questions.html"
+        location.href = "/JEE_Mains/questions.html"
     }
 }
 
@@ -465,7 +777,7 @@ function store() {
     else if (questions[qNum - 1].section == 2) {
         tempArr[qNum - 1].response = inputVal.value
 
-        if (questions[qNum - 1].min < parseFloat(inputVal.value) && parseFloat(inputVal.value) < questions[qNum - 1].max) {
+        if (questions[qNum - 1].answer == parseFloat(inputVal.value)) {
             tempArr[qNum - 1].result = "CORRECT"
             Marks += 4
         } else {
