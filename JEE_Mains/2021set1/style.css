@@ -25,6 +25,10 @@ body{
     text-decoration: underline;
     font-weight: 400;
   }
+  #symbols li{
+    display: flex;
+    margin: 1em 0;
+  }
   .btndiv{
     display: flex;
     justify-content: center;
@@ -84,6 +88,10 @@ body{
       color: orange;
       font-weight: bold;
   }
+  #instructions{
+    text-align: justify;
+    padding: 1em;
+  }
   #questions-img img{
       max-width: 50vw;
       height: auto;
@@ -96,12 +104,20 @@ body{
     padding: 0 15px;
     border-radius: 10px;
   }
+  #category{
+    margin: 0 1em;
+  }
+  #category button{
+    background-color: blue;
+    color: white;
+    border: none;
+  }
   .radio{
     margin-left: 5em;
   }
   .leftpanel{
     width: 70vw;
-    padding: 3em 6em;
+    padding: 0 6em;
   }
   #right-panel{
     width: 30vw;

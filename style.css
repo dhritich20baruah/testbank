@@ -1,0 +1,32 @@
+#Title{
+    font-size: 3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: indigo;
+}
+#mainBtnGroup h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: indigo;
+}
+#mainBtnGroup a{
+    text-decoration:none;
+}
+.btn-categories{
+    display: flex;
+    justify-content: center;
+}
+#mainBtnGroup button{
+    height: 4em;
+    width: 8em;
+    background: indigo;
+    color: white;
+    border: none;
+    margin: 1em;
+}
+#mainBtnGroup button:hover{
+    background: white;
+    color: indigo;
+    cursor: pointer;
+    box-shadow: 0 0 2px indigo;
+}

@@ -553,11 +553,13 @@ let ansNreviewCount = document.getElementById('ansNreviewCount')
 let numberList = document.getElementById('number-list')
 let radioBtn = document.getElementsByClassName('radio')
 let confirm = document.getElementById('confirm')
+let instructions = document.getElementById('instructions')
 let Marks = 0;
 let index = 0;
 let score = 0;
 let btnIndex = 4
-let response, result
+let response = "" 
+let result = ""
 
 //Set up a temporary array of questions
 //append or modify the temp array according to the responses
@@ -577,7 +579,7 @@ function startTest() {
     if (!confirm.checked) {
         document.getElementById('warning1').classList.remove('hide')
     } else {
-        location.href = "/JEE_Mains/questions.html"
+        location.href = "/JEE_Mains/2021set1/questions.html"
     }
 }
 
@@ -599,11 +601,13 @@ function display(i) {
         document.getElementById('radio-btn').classList.add('show')
         document.getElementById('input-response').classList.add('hide')
         document.getElementById('input-response').classList.remove('show')
+        instructions.innerText = ""
     } else if (questions[i].section == 2) {
         document.getElementById('input-response').classList.remove('hide')
         document.getElementById('input-response').classList.add('show')
         document.getElementById('radio-btn').classList.add('hide')
         document.getElementById('radio-btn').classList.remove('show')
+        instructions.innerHTML = `<p>This Section contains 10 questions. Each question is numerical value type. For each question, enter the correct numerical value (in decimal notation, turncated/ rounded-off to second decimal place.) Attempt any five questions out of 10. <br><strong>Marking scheme: +4 for correct answer, 0 if not attempted and 0 in all other cases.</strong></p>`
     }
 }
 

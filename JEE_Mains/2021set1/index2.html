@@ -20,13 +20,13 @@
         <ol>
             <li>Total duration of JEE-Main - 40503627_BTECH 9th Jan 2020 Shift 2 is 180 min.</li>
             <li>The clock will be set at the server. The countdown timer in the top right corner of screen will display the remaining time available for you to complete the examination. When the timer reaches zero, the examination will end by itself. You will not be required to end or submit your examination.</li>
-            <li>The Questions Palette displayed on the right side of screen will show the status of each question using one of the following symbols:
+            <li id="symbols">The Questions Palette displayed on the right side of screen will show the status of each question using one of the following symbols:
                 <ol>
-                    <li><img src="/images/notvisited.jpg" width={30} height={30} alt=""/> You have not visited the question yet.</li>
-                    <li><img src="/images/notanswered.jpg" width={30} height={30} alt=""/> You have not answered the question.</li>
-                    <li><img src="/images/answered.jpg" width={30} height={30} alt=""/> You have answered the question.</li>
-                    <li> <img src="/images/reviewed.jpg" width={30} height={30} alt=""/> You have NOT answered the question, but have marked the question for review.</li>
-                    <li><img src="/images/ansNreview.jpg" width={30} height={30} alt=""/> The question(s) &quot;Answered and Marked for Review&quot; will be considered for evalution.</li>
+                    <li> <div class="notvisited" id="notvisitedCount"></div> You have not visited the question yet.</li>
+                    <li> <div class="notanswered" id="notansweredCount"></div>You have not answered the question.</li>
+                    <li> <div class="answered" id="answeredCount"></div>You have answered the question.</li>
+                    <li> <div class="review" id="reviewCount"></div> You have NOT answered the question, but have marked the question for review.</li>
+                    <li> <div class="ansNreview" id="ansNreviewCount"></div> The question(s) &quot;Answered and Marked for Review&quot; will be considered for evalution.</li>
                 </ol>
             </li>
             <li>You can click on the &quot;&gt;&quot; arrow which apperes to the left of question palette to collapse the question palette thereby maximizing the question window. To view the question palette again, you can click on &quot;&lt;&quot; which appears on the right side of question window.</li>
