@@ -111,6 +111,10 @@ body{
     background-color: blue;
     color: white;
     border: none;
+    cursor: pointer;
+  }
+  #category button:hover{
+    background: greenyellow;
   }
   .radio{
     margin-left: 5em;
