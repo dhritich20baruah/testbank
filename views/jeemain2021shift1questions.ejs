@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head.ejs') %>
+
+  <body>
+    <div class="questions-head">
+      <div class="profilepic">
+        <img src="../static/JEE_Mains/2021shift1/profilepic.png" alt="" />
+      </div>
+      <div class="profileinfo">
+        Candidate Name: <span class="head-info">[Your Name]</span>
+        <br />
+        Exam Name :<span class="head-info">JEE-Main</span>
+        <br />
+        Subject Name:<span class="head-info"
+          >40503627_BTECH 2021 SHIFT-1</span
+        >
+        <br />
+        Remaining Time: <span id="timer"></span>
+      </div>
+    </div>
+ 
+    <div id="questionDisplay">    
+      <div id="questionbody" class="questionbody">
+        <div id="left-panel" class="leftpanel">
+          <div id="category">
+            <button class="btn-category" onclick="gotoQuestion(1)">Physics MCQ</button>
+            <button class="btn-category" onclick="gotoQuestion(21)">Physics Value</button>
+            <button class="btn-category" onclick="gotoQuestion(31)">Chemistry MCQ</button>
+            <button class="btn-category" onclick="gotoQuestion(51)">Chemistry Value</button>
+            <button class="btn-category" onclick="gotoQuestion(61)">Maths MCQ</button>
+            <button class="btn-category" onclick="gotoQuestion(81)">Maths Value</button>
+          </div>
+          <div id="instructions">            
+          </div>
+          <div id="query">
+            <h3>Question : <span id="question-num"></span></h3>
+            <div id="questions-img"></div>
+            <div id="radio-btn" class="">
+              <input type="radio" name="option" class="radio" value="1" /><label
+                for="A"
+                >1</label
+              >
+              <input type="radio" name="option" class="radio" value="2" /><label
+                for="B"
+                >2</label
+              >
+              <input type="radio" name="option" class="radio" value="3" /><label
+                for="C"
+                >3</label
+              >
+              <input type="radio" name="option" class="radio" value="4" /><label
+                for="D"
+                >4</label
+              >
+              <input
+                type="radio"
+                name="option"
+                class="radio"
+                value="E"
+                checked
+                style="display: none"
+              /><label for="E" style="display: none">5</label>
+            </div>
+            <div id="input-response" class="hide">
+              <div id="input-field">
+                <input
+                  type="text"
+                  placeholder="Enter your value"
+                  id="input-value"
+                />
+              </div>
+              <div id="key-pad">
+                <table>
+                  <tr>
+                    <td><button class="num-pad-btn">1</button></td>
+                    <td><button class="num-pad-btn">2</button></td>
+                    <td><button class="num-pad-btn">3</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="num-pad-btn">4</button></td>
+                    <td><button class="num-pad-btn">5</button></td>
+                    <td><button class="num-pad-btn">6</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="num-pad-btn">7</button></td>
+                    <td><button class="num-pad-btn">8</button></td>
+                    <td><button class="num-pad-btn">9</button></td>
+                  </tr>
+                  <tr>
+                    <td><button class="num-pad-btn">.</button></td>
+                    <td><button class="num-pad-btn">0</button></td>
+                    <td><button class="num-pad-btn">C</button></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div id="btn-group-save">
+            <button id="save-btn" onclick="saveNext()">SAVE &amp; NEXT</button>
+            <button id="clear-btn" onclick="uncheck()">CLEAR</button>
+            <button id="save-review-btn" onclick="saveReview()">
+              SAVE &amp; MARK FOR REVIEW
+            </button>
+            <button id="next-review-btn" onclick="reviewNext()">
+              MARK FOR REVIEW &amp; NEXT
+            </button>
+          </div>
+        </div>
+        <div id="right-panel" class="rightpanel">
+          <div id="tag-board" class="tagboard">
+            <ul>
+              <li>
+                <div class="notvisited" id="notvisitedCount">74</div>
+              </li>
+              <li>Not visited</li>
+              <li>
+                <div class="notanswered" id="notansweredCount">0</div>
+              </li>
+              <li>Not answered</li>
+            </ul>
+            <ul>
+              <li>
+                <div class="answered" id="answeredCount">0</div>
+              </li>
+              <li>Answered</li>
+              <li>
+                <div class="review" id="reviewCount">0</div>
+              </li>
+              <li>Marked for review</li>
+            </ul>
+            <ul>
+              <li>
+                <div class="ansNreview" id="ansNreviewCount">0</div>
+              </li>
+              <li>
+                Answered &amp; Marked for Review (will be considered for
+                evaluation)
+              </li>
+            </ul>
+          </div>
+          <div id="number-board">
+            <ul id="number-list">
+              <li onclick="gotoQuestion(1)" class="notanswered">1</li>
+              <li onclick="gotoQuestion(2)" class="notvisited">2</li>
+              <li onclick="gotoQuestion(3)" class="notvisited">3</li>
+              <li onclick="gotoQuestion(4)" class="notvisited">4</li>
+              <li onclick="gotoQuestion(5)" class="notvisited">5</li>
+              <li onclick="gotoQuestion(6)" class="notvisited">6</li>
+              <li onclick="gotoQuestion(7)" class="notvisited">7</li>
+              <li onclick="gotoQuestion(8)" class="notvisited">8</li>
+              <li onclick="gotoQuestion(9)" class="notvisited">9</li>
+              <li onclick="gotoQuestion(10)" class="notvisited">10</li>
+              <li onclick="gotoQuestion(11)" class="notvisited">11</li>
+              <li onclick="gotoQuestion(12)" class="notvisited">12</li>
+              <li onclick="gotoQuestion(13)" class="notvisited">13</li>
+              <li onclick="gotoQuestion(14)" class="notvisited">14</li>
+              <li onclick="gotoQuestion(15)" class="notvisited">15</li>
+              <li onclick="gotoQuestion(16)" class="notvisited">16</li>
+              <li onclick="gotoQuestion(17)" class="notvisited">17</li>
+              <li onclick="gotoQuestion(18)" class="notvisited">18</li>
+              <li onclick="gotoQuestion(19)" class="notvisited">19</li>
+              <li onclick="gotoQuestion(20)" class="notvisited">20</li>
+              <li onclick="gotoQuestion(21)" class="notvisited">21</li>
+              <li onclick="gotoQuestion(22)" class="notvisited">22</li>
+              <li onclick="gotoQuestion(23)" class="notvisited">23</li>
+              <li onclick="gotoQuestion(24)" class="notvisited">24</li>
+              <li onclick="gotoQuestion(25)" class="notvisited">25</li>
+              <li onclick="gotoQuestion(26)" class="notvisited">26</li>
+              <li onclick="gotoQuestion(27)" class="notvisited">27</li>
+              <li onclick="gotoQuestion(28)" class="notvisited">28</li>
+              <li onclick="gotoQuestion(29)" class="notvisited">29</li>
+              <li onclick="gotoQuestion(30)" class="notvisited">30</li>
+              <li onclick="gotoQuestion(31)" class="notvisited">31</li>
+              <li onclick="gotoQuestion(32)" class="notvisited">32</li>
+              <li onclick="gotoQuestion(33)" class="notvisited">33</li>
+              <li onclick="gotoQuestion(34)" class="notvisited">34</li>
+              <li onclick="gotoQuestion(35)" class="notvisited">35</li>
+              <li onclick="gotoQuestion(36)" class="notvisited">36</li>
+              <li onclick="gotoQuestion(37)" class="notvisited">37</li>
+              <li onclick="gotoQuestion(38)" class="notvisited">38</li>
+              <li onclick="gotoQuestion(39)" class="notvisited">39</li>
+              <li onclick="gotoQuestion(40)" class="notvisited">40</li>
+              <li onclick="gotoQuestion(41)" class="notvisited">41</li>
+              <li onclick="gotoQuestion(42)" class="notvisited">42</li>
+              <li onclick="gotoQuestion(43)" class="notvisited">43</li>
+              <li onclick="gotoQuestion(44)" class="notvisited">44</li>
+              <li onclick="gotoQuestion(45)" class="notvisited">45</li>
+              <li onclick="gotoQuestion(46)" class="notvisited">46</li>
+              <li onclick="gotoQuestion(47)" class="notvisited">47</li>
+              <li onclick="gotoQuestion(48)" class="notvisited">48</li>
+              <li onclick="gotoQuestion(49)" class="notvisited">49</li>
+              <li onclick="gotoQuestion(50)" class="notvisited">50</li>
+              <li onclick="gotoQuestion(51)" class="notvisited">51</li>
+              <li onclick="gotoQuestion(52)" class="notvisited">52</li>
+              <li onclick="gotoQuestion(53)" class="notvisited">53</li>
+              <li onclick="gotoQuestion(54)" class="notvisited">54</li>
+              <li onclick="gotoQuestion(55)" class="notvisited">55</li>
+              <li onclick="gotoQuestion(56)" class="notvisited">56</li>
+              <li onclick="gotoQuestion(57)" class="notvisited">57</li>
+              <li onclick="gotoQuestion(58)" class="notvisited">58</li>
+              <li onclick="gotoQuestion(59)" class="notvisited">59</li>
+              <li onclick="gotoQuestion(60)" class="notvisited">60</li>
+              <li onclick="gotoQuestion(61)" class="notvisited">61</li>
+              <li onclick="gotoQuestion(62)" class="notvisited">62</li>
+              <li onclick="gotoQuestion(63)" class="notvisited">63</li>
+              <li onclick="gotoQuestion(64)" class="notvisited">64</li>
+              <li onclick="gotoQuestion(65)" class="notvisited">65</li>
+              <li onclick="gotoQuestion(66)" class="notvisited">66</li>
+              <li onclick="gotoQuestion(67)" class="notvisited">67</li>
+              <li onclick="gotoQuestion(68)" class="notvisited">68</li>
+              <li onclick="gotoQuestion(69)" class="notvisited">69</li>
+              <li onclick="gotoQuestion(70)" class="notvisited">70</li>
+              <li onclick="gotoQuestion(71)" class="notvisited">71</li>
+              <li onclick="gotoQuestion(72)" class="notvisited">72</li>
+              <li onclick="gotoQuestion(73)" class="notvisited">73</li>
+              <li onclick="gotoQuestion(74)" class="notvisited">74</li>
+              <li onclick="gotoQuestion(75)" class="notvisited">75</li>
+              <li onclick="gotoQuestion(76)" class="notvisited">76</li>
+              <li onclick="gotoQuestion(77)" class="notvisited">77</li>
+              <li onclick="gotoQuestion(78)" class="notvisited">78</li>
+              <li onclick="gotoQuestion(79)" class="notvisited">79</li>
+              <li onclick="gotoQuestion(80)" class="notvisited">80</li>
+              <li onclick="gotoQuestion(81)" class="notvisited">81</li>
+              <li onclick="gotoQuestion(82)" class="notvisited">82</li>
+              <li onclick="gotoQuestion(83)" class="notvisited">83</li>
+              <li onclick="gotoQuestion(84)" class="notvisited">84</li>
+              <li onclick="gotoQuestion(85)" class="notvisited">85</li>
+              <li onclick="gotoQuestion(86)" class="notvisited">86</li>
+              <li onclick="gotoQuestion(87)" class="notvisited">87</li>
+              <li onclick="gotoQuestion(88)" class="notvisited">88</li>
+              <li onclick="gotoQuestion(89)" class="notvisited">89</li>
+              <li onclick="gotoQuestion(90)" class="notvisited">90</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button onclick="scorecard()" id="save-btn">Submit</button>
+    </div>
+    
+
+    <div id="scoreboard" class="hide">
+      <h1>Your scorecard</h1>
+      <p>Marks scored: <span id="marksDisplay"></span></p>
+      <a href="/home"><button id="GoHome">HOME</button></a>
+      <div id="scorelist"></div>
+    </div>
+  </body>
+  <script src="../static/jeemain2021shift1.js"></script>
+</html>
