@@ -74,55 +74,55 @@ const questions = [
     {
         "Number": 11,
         "question": "../static/JEE_Advanced/2021paper1/Q11.JPG",
-        "answer": 'B,D',
+        "answer": ['B', 'D'],
         "section": 3
     },
     {
         "Number": 12,
         "question": "../static/JEE_Advanced/2021paper1/Q12.JPG",
-        "answer": 'B,C,D',
+        "answer": ['B', 'C', 'D'],
         "section": 3
     },
     {
         "Number": 13,
         "question": "../static/JEE_Advanced/2021paper1/Q13.JPG",
-        "answer": 'A,B,C',
+        "answer": ['A', 'B', 'C'],
         "section": 3
     },
     {
         "Number": 14,
         "question": "../static/JEE_Advanced/2021paper1/Q14.JPG",
-        "answer": 'A,D',
+        "answer": ['A', 'D'],
         "section": 3
     },
     {
         "Number": 15,
         "question": "../static/JEE_Advanced/2021paper1/Q15.JPG",
-        "answer": 'A,C',
+        "answer": ['A', 'C'],
         "section": 3
     },
     {
         "Number": 16,
         "question": "../static/JEE_Advanced/2021paper1/Q16.JPG",
-        "answer": 'A,C',
+        "answer": ['A', 'C'],
         "section": 3
     },
     {
         "Number": 17,
         "question": "../static/JEE_Advanced/2021paper1/Q17.JPG",
-        "answer": '4',
+        "answer": 4,
         "section": 4
     },
     {
         "Number": 18,
         "question": "../static/JEE_Advanced/2021paper1/Q18.JPG",
-        "answer": '49',
+        "answer": 49,
         "section": 4
     },
     {
         "Number": 19,
         "question": "../static/JEE_Advanced/2021paper1/Q19.JPG",
-        "answer": '9',
+        "answer": 9,
         "section": 4
     },
     {
@@ -200,55 +200,55 @@ const questions = [
     {
         "Number": 30,
         "question": "../static/JEE_Advanced/2021paper1/Q30.JPG",
-        "answer": "C,D",
+        "answer": ['C', 'D'],
         "section": 3,
     },
     {
         "Number": 31,
         "question": "../static/JEE_Advanced/2021paper1/Q31.JPG",
-        "answer": 'A,D',
+        "answer": ['A', 'D'],
         "section": 3
     },
     {
         "Number": 32,
         "question": "../static/JEE_Advanced/2021paper1/Q32.JPG",
-        "answer": 'B,C',
+        "answer": ['B', 'C'],
         "section": 3
     },
     {
         "Number": 33,
         "question": "../static/JEE_Advanced/2021paper1/Q33.JPG",
-        "answer": 'A,B,D',
+        "answer": ['A', 'B', 'D'],
         "section": 3
     },
     {
         "Number": 34,
         "question": "../static/JEE_Advanced/2021paper1/Q34.JPG",
-        "answer": 'A,C,D',
+        "answer": ['A', 'C', 'D'],
         "section": 3
     },
     {
         "Number": 35,
         "question": "../static/JEE_Advanced/2021paper1/Q35.JPG",
-        "answer": 'A,B',
+        "answer": ['A', 'B'],
         "section": 3
     },
     {
         "Number": 36,
         "question": "../static/JEE_Advanced/2021paper1/Q36.JPG",
-        "answer": '9',
+        "answer": 9,
         "section": 4
     },
     {
         "Number": 37,
         "question": "../static/JEE_Advanced/2021paper1/Q37.JPG",
-        "answer": '8',
+        "answer": 8,
         "section": 4
     },
     {
         "Number": 38,
         "question": "../static/JEE_Advanced/2021paper1/Q36.JPG",
-        "answer": "6",
+        "answer": 6,
         "section": 4,
     },
     {
@@ -326,55 +326,55 @@ const questions = [
     {
         "Number": 49,
         "question": "../static/JEE_Advanced/2021paper1/Q49.JPG",
-        "answer": 'A,B,D',
+        "answer": ['A', 'B', 'D'],
         "section": 3
     },
     {
         "Number": 50,
         "question": "../static/JEE_Advanced/2021paper1/Q50.JPG",
-        "answer": 'A,B',
+        "answer": ['A', 'B'],
         "section": 3
     },
     {
         "Number": 51,
         "question": "../static/JEE_Advanced/2021paper1/Q51.JPG",
-        "answer": "A,B,C",
+        "answer": ['A', 'B', 'C'],
         "section": 3,
     },
     {
         "Number": 52,
         "question": "../static/JEE_Advanced/2021paper1/Q52.JPG",
-        "answer": "A,B,C",
+        "answer": ['A', 'B', 'C'],
         "section": 3,
     },
     {
         "Number": 53,
         "question": "../static/JEE_Advanced/2021paper1/Q53.JPG",
-        "answer": "A,B",
+        "answer": ['A', 'B'],
         "section": 3,
     },
     {
         "Number": 54,
         "question": "../static/JEE_Advanced/2021paper1/Q54.JPG",
-        "answer": "B,D",
+        "answer": ['B', 'D'],
         "section": 3,
     },
     {
         "Number": 55,
         "question": "../static/JEE_Advanced/2021paper1/Q52.JPG",
-        "answer": "4",
+        "answer": 4,
         "section": 4,
     },
     {
         "Number": 56,
         "question": "../static/JEE_Advanced/2021paper1/Q53.JPG",
-        "answer": "2",
+        "answer": 2,
         "section": 4,
     },
     {
         "Number": 57,
         "question": "../static/JEE_Advanced/2021paper1/Q54.JPG",
-        "answer": "7",
+        "answer": 7,
         "section": 4,
     },
 ]
@@ -390,12 +390,15 @@ let reviewCount = document.getElementById('reviewCount')
 let ansNreviewCount = document.getElementById('ansNreviewCount')
 let numberList = document.getElementById('number-list')
 let radioBtn = document.getElementsByClassName('radio')
+let radioBtn2 = document.getElementsByClassName('radio2')
 let confirm = document.getElementById('confirm')
+let instructions = document.getElementById('instructions')
 let Marks = 0;
 let index = 0;
 let score = 0;
 let btnIndex = 4
-let response, result
+let response = ""
+let result = ""
 
 //Set up a temporary array of questions
 //append or modify the temp array according to the responses
@@ -435,13 +438,40 @@ function display(i) {
     if (questions[i].section == 1) {
         document.getElementById('radio-btn').classList.remove('hide')
         document.getElementById('radio-btn').classList.add('show')
+        document.getElementById('radio-btn2').classList.add('hide')
+        document.getElementById('radio-btn2').classList.remove('show')
         document.getElementById('input-response').classList.add('hide')
         document.getElementById('input-response').classList.remove('show')
-    } else if (questions[i].section == 2) {
+        instructions.innerHTML = `<p>This Section contains 4 questions. Each question has four options. <strong>ONLY ONE </strong>of these four optins is the correct answer. <br><strong>Marking scheme: +3 for correct answer, 0 if not attempted and -1 in all other cases.</strong></p>`
+    }
+    if (questions[i].section == 2) {
         document.getElementById('input-response').classList.remove('hide')
         document.getElementById('input-response').classList.add('show')
         document.getElementById('radio-btn').classList.add('hide')
         document.getElementById('radio-btn').classList.remove('show')
+        document.getElementById('radio-btn2').classList.add('hide')
+        document.getElementById('radio-btn2').classList.remove('show')
+        instructions.innerHTML = `<p>This Section contains THREE(3) question stems. There are TWO (2) questions corresponding to each question stem. For each question, enter the correct numerical value corresponding to the answer in the designated place using the mouse and the on-screen virtual numeric keypad. If the numerical value has more than two decimal places, truncate/round-off the value to TWO decimal
+        places. <br><strong>Marking scheme: +2 if ONLY the correct value is entered, 0 if not attempted and 0 in all other cases.</strong></p>`
+    }
+    if (questions[i].section == 3) {
+        document.getElementById('radio-btn').classList.add('hide')
+        document.getElementById('radio-btn').classList.remove('show')
+        document.getElementById('radio-btn2').classList.remove('hide')
+        document.getElementById('radio-btn2').classList.add('show')
+        document.getElementById('input-response').classList.add('hide')
+        document.getElementById('input-response').classList.remove('show')
+        instructions.innerHTML = `<p>This Section contains SIX (06) questions. Each question has four options.<strong> ONE OR MORE THAN ONE</strong> of these four option(s) is (are) correct answer(s). <br><strong>Marking scheme:<br>Full Marks : +4 If only (all) the correct option(s) is(are) chosen; <br>Partial Marks : +3 If all the four options are correct but ONLY three options are chosen; <br>Partial Marks : +2 If three or more options are correct but ONLY two options are chosen, both of which are correct; <br>Partial Marks : +1 If two or more options are correct but ONLY one option is chosen and it is a correct option; <br>Zero Marks : 0 If unanswered; <br>Negative Marks : −2 In all other cases.</strong></p>`
+    }
+    if (questions[i].section == 4) {
+        document.getElementById('input-response').classList.remove('hide')
+        document.getElementById('input-response').classList.add('show')
+        document.getElementById('radio-btn').classList.add('hide')
+        document.getElementById('radio-btn').classList.remove('show')
+        document.getElementById('radio-btn2').classList.add('hide')
+        document.getElementById('radio-btn2').classList.remove('show')
+        instructions.innerHTML = `<p>This Section contains THREE (03) questions. The answer to each question is a NON-NEGATIVE INTEGER. For each question, enter the correct integer corresponding to the answer using the mouse and the
+        on-screen virtual numeric keypad in the place designated to enter the answer. <br><strong>Marking scheme: +4 for correct answer, 0 if not attempted and 0 in all other cases.</strong></p>`
     }
 }
 
@@ -466,19 +496,26 @@ for (item of buttons) {
 
 //Save and next
 function saveNext() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || radioBtn2[0].checked || radioBtn2[1].checked || radioBtn2[2].checked || radioBtn2[3].checked || !inputVal.value == "") {
         let qNum = questionNumber.innerHTML
         if (!numberList.children[qNum - 1].classList.contains('answered')) {
             answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
         }
-        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
-
-
+        if (numberList.children[qNum - 1].classList.contains('notvisited')) {
+            notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        }
+        if (numberList.children[qNum - 1].classList.contains('ansNreview')) {
+            ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) - 1;
+        }
+        if (numberList.children[qNum - 1].classList.contains('review')) {
+            reviewCount.innerHTML = parseInt(reviewCount.innerHTML) - 1;
+        }
         if (notansweredCount.innerHTML > 0) {
             notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
         }
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
+        numberList.children[qNum - 1].classList.remove('review');
         numberList.children[qNum - 1].classList.add('answered');
         numberList.children[qNum].classList.add('notanswered');
         index = parseInt(questionNumber.innerText);
@@ -488,39 +525,51 @@ function saveNext() {
     else {
         alert("Please choose an option")
     }
+    console.log("Marks: ", Marks)
 }
 
 //CLEAR
 function uncheck() {
-    radioBtn[0].checked = false;
-    radioBtn[1].checked = false;
-    radioBtn[2].checked = false;
-    radioBtn[3].checked = false;
+    var radio = document.querySelector('input[type=radio]:checked');
+    radio.checked = false;
     answeredCount.innerHTML = parseInt(answeredCount.innerHTML) - 1;
     notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
     let qNum = questionNumber.innerHTML
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('answered');
     numberList.children[qNum - 1].classList.add('notanswered');
-    let score = localStorage.getItem('score')
-    if (score == null) {
-        scoreArr = []
+    if (tempArr[qNum - 1].result == "CORRECT") {
+        Marks -= 4
+    } else if (tempArr[qNum - 1].result == "INCORRECT") {
+        Marks += 1
     }
-    else {
-        scoreArr = JSON.parse(score)
-    }
-    console.log(scoreArr)
-
+    tempArr[qNum - 1].result = ""
+    tempArr[qNum - 1].response = ""
+    tempArr[qNum - 1].btnIndex = 4
 }
 
 //Save and mark for review
 function saveReview() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked) {
-        ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
-        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
         let qNum = questionNumber.innerHTML
+        if (!numberList.children[qNum - 1].classList.contains('ansNreview')) {
+            ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
+        }
+        if (numberList.children[qNum - 1].classList.contains('notvisited')) {
+            notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        }
+        if (numberList.children[qNum - 1].classList.contains('answered')) {
+            ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) - 1;
+        }
+        if (numberList.children[qNum - 1].classList.contains('review')) {
+            reviewCount.innerHTML = parseInt(reviewCount.innerHTML) - 1;
+        }
+        if (notansweredCount.innerHTML > 0) {
+            notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
+        }
         numberList.children[qNum - 1].classList.remove('notvisited');
         numberList.children[qNum - 1].classList.remove('notanswered');
+        numberList.children[qNum - 1].classList.remove('review');
         numberList.children[qNum - 1].classList.add('ansNreview');
         numberList.children[qNum].classList.add('notanswered');
         index = parseInt(questionNumber.innerText);
@@ -536,7 +585,7 @@ function saveReview() {
 function reviewNext() {
     reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
     notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
-    let qNum = questionNumber.innerHTML
+    let qNum = questionNumber.innerHTML;
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('notanswered');
     numberList.children[qNum - 1].classList.add('review');
@@ -555,9 +604,7 @@ function gotoQuestion(q) {
     display(q - 1);
     numberList.children[q - 1].classList.remove('notvisited');
     numberList.children[q - 1].classList.add('notanswered');
-    console.log(tempArr[q - 1].btnIndex)
     radioBtn[tempArr[q - 1].btnIndex].checked = true
-
 }
 
 //Countdown
@@ -602,25 +649,103 @@ function store() {
             if (radioBtn[i].checked) {
                 tempArr[qNum - 1].response = radioBtn[i].value
                 tempArr[qNum - 1].btnIndex = i;
-                if (radioBtn[i].value == questions[qNum - 1].answer) {
-                    tempArr[qNum - 1].result = "CORRECT"
-                    Marks += 4
+                if (tempArr[qNum - 1].result == "CORRECT") {
+                    Marks += 0
                 } else {
-                    tempArr[qNum - 1].result = "INCORRECT"
-                    Marks -= 1
+                    if (radioBtn[i].value == questions[qNum - 1].answer) {
+                        tempArr[qNum - 1].result = "CORRECT"
+                        Marks += 4
+                    } else {
+                        tempArr[qNum - 1].result = "INCORRECT"
+                        Marks -= 1
+                    }
                 }
             }
         }
     }
-    else if (questions[qNum - 1].section == 2) {
+    if (questions[qNum - 1].section == 2) {
         tempArr[qNum - 1].response = inputVal.value
 
-        if (questions[qNum - 1].min < parseFloat(inputVal.value) && parseFloat(inputVal.value) < questions[qNum - 1].max) {
+        if (questions[qNum - 1].min <= parseFloat(inputVal.value) && parseFloat(inputVal.value <= questions[qNum - 1].max)) {
             tempArr[qNum - 1].result = "CORRECT"
             Marks += 4
         } else {
             tempArr[qNum - 1].result = "INCORRECT"
-            Marks -= 1
+            Marks -= 0
+        }
+    }
+    if (questions[qNum - 1].section == 3) {
+        let res = []
+        let ans = tempArr[qNum - 1].answer
+        for (var i = 0; i < 4; i++) {
+            if (radioBtn2[i].checked) {
+                res.push(radioBtn2[i].value)
+            }
+        }
+        tempArr[qNum - 1].response = res
+        for (var i = 0; i < res.length; i++) {
+            if (!ans.includes(res[i])) {
+                tempArr[qNum - 1].result = "INCORRECT"
+                Marks -= 2
+                break
+            } else {
+                if (ans.length == 4) {
+                    if (res.length == 4) {
+                        Marks += 4
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 3) {
+                        Marks += 3
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 2) {
+                        Marks += 2
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 1) {
+                        Marks += 1
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    }
+                }
+                if (ans.length == 3) {
+                    if (res.length == 3) {
+                        Marks += 4
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 2) {
+                        Marks += 2
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 1) {
+                        Marks += 1
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    }
+                } 
+                if (ans.length == 2) {
+                    if (res.length == 2) {
+                        Marks += 4
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } if (res.length == 1) {
+                        Marks += 1
+                        tempArr[qNum - 1].result = "CORRECT"
+                        break
+                    } 
+                }
+            }
+        }
+    }
+    if (questions[qNum - 1].section == 4) {
+        tempArr[qNum - 1].response = inputVal.value
+
+        if (questions[qNum - 1].answer == parseFloat(inputVal.value)) {
+            tempArr[qNum - 1].result = "CORRECT"
+            Marks += 4
+        } else {
+            tempArr[qNum - 1].result = "INCORRECT"
+            Marks -= 0
         }
     }
 
@@ -642,12 +767,17 @@ function store() {
     scorelist.innerHTML = html
 
     document.getElementById('marksDisplay').innerText = `${Marks}`
-
-    radioBtn[0].checked = false
-    radioBtn[1].checked = false
-    radioBtn[2].checked = false
-    radioBtn[3].checked = false
-    inputVal.value = ""
+    if (tempArr[qNum].section == 1 || tempArr[qNum].section == 2 || tempArr[qNum].section == 4) {
+        radioBtn[tempArr[qNum].btnIndex].checked = true
+        screenValue = ""
+        inputVal.value = ""
+    }
+    if (tempArr[qNum].section == 3) {
+        radioBtn2[0].checked = false;
+        radioBtn2[1].checked = false;
+        radioBtn2[2].checked = false;
+        radioBtn2[3].checked = false;
+    }
 }
 
 //Display scorecard

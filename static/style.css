@@ -148,7 +148,7 @@ body{
     #category button:hover{
       background: greenyellow;
     }
-    .radio{
+    .radio, .radio2{
       margin-left: 5em;
     }
     .leftpanel{
@@ -159,6 +159,10 @@ body{
       width: 30vw;
       padding: 1em;
       background-color: wheat;
+    }
+    #question-container{
+      height: 75vh;
+      overflow: auto;
     }
     @media (max-width: 450px){
       .questions-head{
@@ -196,7 +200,7 @@ body{
         max-width: 90vw;
         height: auto;
     } 
-    .radio{
+    .radio, .radio2{
       margin-left: 2em;
     }
     }

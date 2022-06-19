@@ -661,7 +661,6 @@ function saveNext() {
     else {
         alert("Please choose an option")
     }
-    console.log("Marks=", Marks)
 }
 
 //CLEAR
@@ -717,8 +716,6 @@ function saveReview() {
     else {
         alert("Please choose an option")
     }
-    console.log("Marks=", Marks)
-
 }
 
 //Mark for review and next
@@ -836,12 +833,8 @@ function store() {
 
     radioBtn[tempArr[qNum].btnIndex].checked = true
 
-    // radioBtn[0].checked = false
-    // radioBtn[1].checked = false
-    // radioBtn[2].checked = false
-    // radioBtn[3].checked = false
-    // radioBtn[4].checked = true
     inputVal.value = ""
+    screenValue = ""
 }
 
 //Display scorecard

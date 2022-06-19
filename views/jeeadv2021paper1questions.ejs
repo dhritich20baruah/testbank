@@ -1,91 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %>
+
+    <%- include('./partials/head.ejs') %>
+
   <body>
     <div class="questions-head">
       <div class="profilepic">
-        <img src="/images/profilepic.png" alt="" />
+        <img src="../static/JEE_Mains/2021shift1/profilepic.png" alt="" />
       </div>
       <div class="profileinfo">
         Candidate Name: <span class="head-info">[Your Name]</span>
         <br />
-        Exam Name :<span class="head-info">JEE-Main</span>
+        Exam Name :<span class="head-info">JEE-Adv-2021-paper1</span>
         <br />
         Subject Name:<span class="head-info"
-          >40503627_BTECH 20th June 2022</span
+          >40503627_BTECH 2021 SHIFT-1</span
         >
         <br />
         Remaining Time: <span id="timer"></span>
       </div>
     </div>
-    <div id="questionDisplay">
-    
+ 
+    <div id="questionDisplay">    
       <div id="questionbody" class="questionbody">
         <div id="left-panel" class="leftpanel">
-          <div id="query">
-            <h3>Question : <span id="question-num"></span></h3>
-            <div id="questions-img"></div>
-            <div id="radio-btn" class="">
-              <input type="radio" name="option" class="radio" value="A" /><label
-                for="A"
-                >A</label
-              >
-              <input type="radio" name="option" class="radio" value="B" /><label
-                for="B"
-                >B</label
-              >
-              <input type="radio" name="option" class="radio" value="C" /><label
-                for="C"
-                >C</label
-              >
-              <input type="radio" name="option" class="radio" value="D" /><label
-                for="D"
-                >D</label
-              >
-              <input
-                type="radio"
-                name="option"
-                class="radio"
-                value="E"
-                checked
-                style="display: none"
-              /><label for="E" style="display: none">E</label>
+          <div id="question-container">
+            <div id="instructions"> 
+              <p>This Section contains 4 questions. Each question has four options. <strong>ONLY ONE </strong>of these four optins is the correct answer. <br><strong>Marking scheme: +3 for correct answer, 0 if not attempted and -1 in all other cases.</strong></p>           
             </div>
-            <div id="input-response" class="hide">
-              <div id="input-field">
+            <div id="query">
+              <h3>Question : <span id="question-num"></span></h3>
+              <div id="questions-img"></div>
+              <div id="radio-btn" class="">
+                <input type="radio" name="option" class="radio" value="A" /><label
+                  for="A"
+                  >A</label
+                >
+                <input type="radio" name="option" class="radio" value="B" /><label
+                  for="B"
+                  >B</label
+                >
+                <input type="radio" name="option" class="radio" value="C" /><label
+                  for="C"
+                  >C</label
+                >
+                <input type="radio" name="option" class="radio" value="D" /><label
+                  for="D"
+                  >D</label
+                >
                 <input
-                  type="text"
-                  placeholder="Enter your value"
-                  id="input-value"
-                />
+                  type="radio"
+                  name="option"
+                  class="radio"
+                  value="E"
+                  checked
+                  style="display: none"
+                /><label for="E" style="display: none">5</label>
               </div>
-              <div id="key-pad">
-                <table>
-                  <tr>
-                    <td><button class="num-pad-btn">1</button></td>
-                    <td><button class="num-pad-btn">2</button></td>
-                    <td><button class="num-pad-btn">3</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="num-pad-btn">4</button></td>
-                    <td><button class="num-pad-btn">5</button></td>
-                    <td><button class="num-pad-btn">6</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="num-pad-btn">7</button></td>
-                    <td><button class="num-pad-btn">8</button></td>
-                    <td><button class="num-pad-btn">9</button></td>
-                  </tr>
-                  <tr>
-                    <td><button class="num-pad-btn">.</button></td>
-                    <td><button class="num-pad-btn">0</button></td>
-                    <td><button class="num-pad-btn">C</button></td>
-                  </tr>
-                </table>
+  
+              <div id="radio-btn2" class="hide">
+                <input type="radio" name="A" class="radio2" value="A" /><label
+                  for="A"
+                  >A</label
+                >
+                <input type="radio" name="B" class="radio2" value="B" /><label
+                  for="B"
+                  >B</label
+                >
+                <input type="radio" name="C" class="radio2" value="C" /><label
+                  for="C"
+                  >C</label
+                >
+                <input type="radio" name="D" class="radio2" value="D" /><label
+                  for="D"
+                  >D</label
+                >
               </div>
+  
+              <div id="input-response" class="hide">
+                <div id="input-field">
+                  <input
+                    type="text"
+                    placeholder="Enter your value"
+                    id="input-value"
+                  />
+                </div>
+                <div id="key-pad">
+                  <table>
+                    <tr>
+                      <td><button class="num-pad-btn">1</button></td>
+                      <td><button class="num-pad-btn">2</button></td>
+                      <td><button class="num-pad-btn">3</button></td>
+                    </tr>
+                    <tr>
+                      <td><button class="num-pad-btn">4</button></td>
+                      <td><button class="num-pad-btn">5</button></td>
+                      <td><button class="num-pad-btn">6</button></td>
+                    </tr>
+                    <tr>
+                      <td><button class="num-pad-btn">7</button></td>
+                      <td><button class="num-pad-btn">8</button></td>
+                      <td><button class="num-pad-btn">9</button></td>
+                    </tr>
+                    <tr>
+                      <td><button class="num-pad-btn">.</button></td>
+                      <td><button class="num-pad-btn">0</button></td>
+                      <td><button class="num-pad-btn">C</button></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <hr />
             </div>
-            <hr />
           </div>
+     
           <div id="btn-group-save">
             <button id="save-btn" onclick="saveNext()">SAVE &amp; NEXT</button>
             <button id="clear-btn" onclick="uncheck()">CLEAR</button>
@@ -185,6 +213,10 @@
               <li onclick="gotoQuestion(52)" class="notvisited">52</li>
               <li onclick="gotoQuestion(53)" class="notvisited">53</li>
               <li onclick="gotoQuestion(54)" class="notvisited">54</li>
+              <li onclick="gotoQuestion(55)" class="notvisited">55</li>
+              <li onclick="gotoQuestion(56)" class="notvisited">56</li>
+              <li onclick="gotoQuestion(57)" class="notvisited">57</li>
+                     
             </ul>
           </div>
         </div>
@@ -196,7 +228,7 @@
     <div id="scoreboard" class="hide">
       <h1>Your scorecard</h1>
       <p>Marks scored: <span id="marksDisplay"></span></p>
-      <a href="/"><button id="GoHome">HOME</button></a>
+      <a href="/home"><button id="GoHome">HOME</button></a>
       <div id="scorelist"></div>
     </div>
   </body>
