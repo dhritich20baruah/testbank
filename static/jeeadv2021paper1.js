@@ -405,13 +405,12 @@ let result = ""
 //when test is over delete or revert that array
 
 let tempArr = []
-tempArr = questions.map(elem => ({ ...elem, btnIndex: btnIndex, response: response, result: result }))
+tempArr = questions.map(elem => ({ ...elem, btnIndex: btnIndex, response: response, result: result, score: score }))
 
 
 //intialize page
 questionsImg.innerHTML = `<img src=${questions[index].question} alt=""/>`
 questionNumber.innerHTML = `${index + 1}`
-
 
 //Index page proceed button function
 function startTest() {
@@ -434,6 +433,7 @@ function start() {
 //Display questions
 function display(i) {
     questionsImg.innerHTML = `<img src=${questions[i].question} alt=""/>`
+    document.getElementById("response-display").innerHTML = tempArr[i].response
     questionNumber.innerText = i + 1
     if (questions[i].section == 1) {
         document.getElementById('radio-btn').classList.remove('hide')
@@ -538,19 +538,19 @@ function uncheck() {
     numberList.children[qNum - 1].classList.remove('notvisited');
     numberList.children[qNum - 1].classList.remove('answered');
     numberList.children[qNum - 1].classList.add('notanswered');
-    if (tempArr[qNum - 1].result == "CORRECT") {
-        Marks -= 4
-    } else if (tempArr[qNum - 1].result == "INCORRECT") {
-        Marks += 1
-    }
+    Marks -= tempArr[qNum - 1].score
+    tempArr[qNum - 1].result = ""
+    tempArr[qNum - 1].score = 0
     tempArr[qNum - 1].result = ""
     tempArr[qNum - 1].response = ""
     tempArr[qNum - 1].btnIndex = 4
+    console.log("Marks: ", Marks)
+
 }
 
 //Save and mark for review
 function saveReview() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || radioBtn2[0].checked || radioBtn2[1].checked || radioBtn2[2].checked || radioBtn2[3].checked || !inputVal.value == "") {
         let qNum = questionNumber.innerHTML
         if (!numberList.children[qNum - 1].classList.contains('ansNreview')) {
             ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
@@ -654,9 +654,11 @@ function store() {
                 } else {
                     if (radioBtn[i].value == questions[qNum - 1].answer) {
                         tempArr[qNum - 1].result = "CORRECT"
-                        Marks += 4
+                        tempArr[qNum - 1].score = 3
+                        Marks += 3
                     } else {
                         tempArr[qNum - 1].result = "INCORRECT"
+                        tempArr[qNum - 1].score = -1
                         Marks -= 1
                     }
                 }
@@ -665,10 +667,10 @@ function store() {
     }
     if (questions[qNum - 1].section == 2) {
         tempArr[qNum - 1].response = inputVal.value
-
-        if (questions[qNum - 1].min <= parseFloat(inputVal.value) && parseFloat(inputVal.value <= questions[qNum - 1].max)) {
+        if (questions[qNum - 1].min <= parseFloat(inputVal.value) && parseFloat(inputVal.value) <= questions[qNum - 1].max) {
             tempArr[qNum - 1].result = "CORRECT"
-            Marks += 4
+            tempArr[qNum - 1].score = 2
+            Marks += 2
         } else {
             tempArr[qNum - 1].result = "INCORRECT"
             Marks -= 0
@@ -687,24 +689,29 @@ function store() {
             if (!ans.includes(res[i])) {
                 tempArr[qNum - 1].result = "INCORRECT"
                 Marks -= 2
+                tempArr[qNum - 1].score = -2
                 break
             } else {
                 if (ans.length == 4) {
                     if (res.length == 4) {
                         Marks += 4
                         tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].score = 4
                         break
                     } if (res.length == 3) {
                         Marks += 3
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 3
                         break
                     } if (res.length == 2) {
                         Marks += 2
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 2
                         break
                     } if (res.length == 1) {
                         Marks += 1
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 1
                         break
                     }
                 }
@@ -712,27 +719,32 @@ function store() {
                     if (res.length == 3) {
                         Marks += 4
                         tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].score = 4
                         break
                     } if (res.length == 2) {
                         Marks += 2
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 2
                         break
                     } if (res.length == 1) {
                         Marks += 1
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 1
                         break
                     }
-                } 
+                }
                 if (ans.length == 2) {
                     if (res.length == 2) {
                         Marks += 4
                         tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].score = 4
                         break
                     } if (res.length == 1) {
                         Marks += 1
-                        tempArr[qNum - 1].result = "CORRECT"
+                        tempArr[qNum - 1].result = "PARTIALLY CORRECT"
+                        tempArr[qNum - 1].score = 1
                         break
-                    } 
+                    }
                 }
             }
         }
@@ -742,6 +754,7 @@ function store() {
 
         if (questions[qNum - 1].answer == parseFloat(inputVal.value)) {
             tempArr[qNum - 1].result = "CORRECT"
+            tempArr[qNum - 1].score = 4
             Marks += 4
         } else {
             tempArr[qNum - 1].result = "INCORRECT"

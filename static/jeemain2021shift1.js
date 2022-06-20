@@ -595,6 +595,7 @@ function start() {
 //Display questions
 function display(i) {
     questionsImg.innerHTML = `<img src=${questions[i].question} alt=""/>`
+    document.getElementById("response-display").innerHTML = tempArr[i].response
     questionNumber.innerText = i + 1
     if (questions[i].section == 1) {
         document.getElementById('radio-btn').classList.remove('hide')
