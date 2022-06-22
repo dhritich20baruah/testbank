@@ -643,7 +643,7 @@ var x = setInterval(function () {
 //Storage and evaluation
 function store() {
     let qNum = questionNumber.innerHTML - 1
-
+    let scored = tempArr[qNum-1].score
     if (questions[qNum - 1].section == 1) {
         for (var i = 0; i < 4; i++) {
             if (radioBtn[i].checked) {
