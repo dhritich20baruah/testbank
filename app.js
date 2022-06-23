@@ -37,6 +37,18 @@ app.get('/jeeadv2021paper1', (req, res)=>{
 app.get('/jeeadv2021paper1questions', (req, res)=>{
     res.render("jeeadv2021paper1questions")
 })
+app.get('/jeeadv2021paper2', (req, res)=>{
+    res.render("jeeadv2021paper2")
+})
+app.get('/jeeadv2021paper2questions', (req, res)=>{
+    res.render("jeeadv2021paper2questions")
+})
+app.get('/rrbClerkPrelims2020', (req, res)=>{
+    res.render("rrbClerkPrelims2020")
+})
+app.get('/rrbClerkPrelimsQuestions2020', (req, res)=>{
+    res.render("rrbClerkPrelimsQuestions2020")
+})
 app.listen(port, () =>{
     console.log(`Server started at port ${port}`)
 })
