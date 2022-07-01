@@ -579,7 +579,7 @@ function startTest() {
     if (!confirm.checked) {
         document.getElementById('warning1').classList.remove('hide')
     } else {
-        location.href = "/jeemain2021shift2questions"
+        location.href = "/jeemains/jeemain2021shift2questions"
     }
 }
 

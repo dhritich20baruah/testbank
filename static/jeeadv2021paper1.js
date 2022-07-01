@@ -417,7 +417,7 @@ function startTest() {
     if (!confirm.checked) {
         document.getElementById('warning1').classList.remove('hide')
     } else {
-        location.href = "/jeeadv2021paper1questions"
+        location.href = "/jeeadv/jeeadv2021paper1questions"
     }
 }
 
