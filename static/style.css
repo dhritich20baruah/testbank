@@ -496,7 +496,6 @@ body{
     height: 63vh;
     overflow: auto;
     border-bottom: 1px solid rgb(226, 215, 215);
-
   }
   #direction{
     width: 60%;
@@ -652,9 +651,7 @@ body{
   #question-palette ul li:hover{
     cursor: pointer;
   }
-  #num-list>li{
- 
-  }
+
   #submit-btn{
     background-color: white;
     border: 2px solid green;

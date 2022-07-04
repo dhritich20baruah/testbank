@@ -3,115 +3,118 @@
 const questions = [
     {
         "number": "1",
-        "directions": "Study the following information     carefully and answer the questions given below:",
-        "question-statement":"Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
-        "question":"Who among the following sits second to the right of S?",
-        "options":["Q", "E", "D", "W", "None of these"],
-        "answer":"E",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
+        "question": "Who among the following sits second to the right of S?",
+        "options": ["Q", "E", "D", "W", "None of these"],
+        "answer": "E",
         "section": 1
     },
     {
         "number": "2",
-        "directions": "Study the following information     carefully and answer the questions given below:",
-        "question-statement":"Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
-        "question":"How many persons sit between D and W when counted from the right of D?",
-        "options":["Three", "Four", "One", "Two", "None of these"],
-        "answer":"Two",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
+        "question": "How many persons sit between D and W when counted from the right of D?",
+        "options": ["Three", "Four", "One", "Two", "None of these"],
+        "answer": "Two",
         "section": 1
     },
     {
         "number": "3",
-        "directions": "Study the following information     carefully and answer the questions given below:",
-        "question-statement":"Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
-        "question":"Who among the following sits second to the left of G?",
-        "options":["D", "K", "H", "S", "None of these"],
-        "answer":"H",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
+        "question": "Who among the following sits second to the left of G?",
+        "options": ["D", "K", "H", "S", "None of these"],
+        "answer": "H",
         "section": 1
     },
     {
         "number": "4",
-        "directions": "Study the following information     carefully and answer the questions given below:",
-        "question-statement":"Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
-        "question":"Who among the following are the immediate   neighbours to each other?",
-        "options":["K,E", "Q,D", "G,H", "W,S", "None of these"],
-        "answer":"Q,D",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
+        "question": "Who among the following are the immediate   neighbours to each other?",
+        "options": ["K,E", "Q,D", "G,H", "W,S", "None of these"],
+        "answer": "Q,D",
         "section": 1
     },
     {
         "number": "5",
-        "directions": "Study the following information     carefully and answer the questions given below:",
-        "question-statement":"Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
-        "question":"Four of the following five are alike in a certain way and hence form a group. Find the one who does not belong to that group?",
-        "options":["E", "D", "G", "K", "H"],
-        "answer":"E",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Eight persons i.e. D, Q, G, H, K, S, E and W are sitting around a square table in such a way that four persons sit at the corner side of the table and other four persons sit in the middle side of the table. The persons who sit at the corner side are facing away from the center and the persons who sit in the middle side are facing towards the center. D sits at the corner side of the table. One person sits between D and G. Q sits third to the right of G. Three persons sit between Q and E. W sits second to the right of E. W is not an immediate neighbour of D. H sits second to the right of K.",
+        "question": "Four of the following five are alike in a certain way and hence form a group. Find the one who does not belong to that group?",
+        "options": ["E", "D", "G", "K", "H"],
+        "answer": "E",
         "section": 1
     },
     {
         "number": "6",
-        "directions": "Study the following sequence of       numbers and alphabets and answer the given questions-",
-        "question-statement":"P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
-        "question":"How many numbers are there which are immediately preceded by a vowel?",
-        "options":["One", "None", "Two", "Three", "None of these"],
-        "answer":"Two",
+        "directions": "Study the following sequence of numbers and alphabets and answer the given questions-",
+        "questionStatement": "P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
+        "question": "How many numbers are there which are immediately preceded by a vowel?",
+        "options": ["One", "None", "Two", "Three", "None of these"],
+        "answer": "Two",
         "section": 1
     },
     {
         "number": "7",
-        "directions": "Study the following sequence of       numbers and alphabets and answer the given questions-",
-        "question-statement":"P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
-        "question":"If all the numbers are removed from the given series, then which among the following element is seventh  from the right end?",
-        "options":["E", "O", "F", "R", "None of these"],
-        "answer":"R",
+        "directions": "Study the following sequence of numbers and alphabets and answer the given questions-",
+        "questionStatement": "P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
+        "question": "If all the numbers are removed from the given series, then which among the following element is seventh  from the right end?",
+        "options": ["E", "O", "F", "R", "None of these"],
+        "answer": "R",
         "section": 1
     },
     {
         "number": "8",
-        "directions": "Study the following sequence of       numbers and alphabets and answer the given questions-",
-        "question-statement":"P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
-        "question":"If all the consonants are removed from the given series, then which among the following element is ninth from the left end?",
-        "options":["2", "O", "3", "7", "None of these"],
-        "answer":"2",
+        "directions": "Study the following sequence of numbers and alphabets and answer the given questions-",
+        "questionStatement": "P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
+        "question": "If all the consonants are removed from the given series, then which among the following element is ninth from the left end?",
+        "options": ["2", "O", "3", "7", "None of these"],
+        "answer": "2",
         "section": 1
     },
     {
         "number": "9",
-        "directions": "Study the following sequence of       numbers and alphabets and answer the given questions-",
-        "question-statement":"P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
-        "question":"Which among the following element is fifth to the left of twelfth element from the left end?",
-        "options":["F", "8", "9", "1", "None of these"],
-        "answer":"8",
+        "directions": "Study the following sequence of numbers and alphabets and answer the given questions-",
+        "questionStatement": "P 4 S A W 5 8 F 9 1 R E 7 2 O 3 7 5 1 B 6 K G N",
+        "question": "Which among the following element is fifth to the left of twelfth element from the left end?",
+        "options": ["F", "8", "9", "1", "None of these"],
+        "answer": "8",
         "section": 1
     },
     {
         "number": "10",
-        "directions": "Study the following information        carefully and answer the questions given below:",
-        "question-statement":"Five persons A, B, C, D and E have different heights. Less than two persons are shorter than D. As many persons are taller than D as shorter than C. A is taller than B but shorter       than E. B is not the shortest person. The height of third tallest person is 86 cm.",
-        "question":"If the height of shortest person is 68 cm, then what may be the height of B?",
-        "options":["69cm", "81cm", "78cm", "All the given heights", "None of these"],
-        "answer":"Two",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Five persons A, B, C, D and E have different heights. Less than two persons are shorter than D. As many persons are taller than D as shorter than C. A is taller than B but shorter       than E. B is not the shortest person. The height of third tallest person is 86 cm.",
+        "question": "If the height of shortest person is 68 cm, then what may be the height of B?",
+        "options": ["69cm", "81cm", "78cm", "All the given heights", "None of these"],
+        "answer": "Two",
         "section": 1
     },
 ]
 
 
-let questionsImg = document.getElementById('questions-img')
-let questionNumber = document.getElementById('question-num')
+let questionStatement = document.getElementById('questionStatement')
+let questionNumber = document.getElementById('qnum')
+let questionP = document.getElementById("questionP")
+let directions = document.getElementById("direction-title")
+let optionsLabel = document.getElementsByClassName("optionInput")
 let proceed = document.getElementById('proceed')
 let timer = document.getElementById('timer')
-let notVisitedCount = document.getElementById('notvisitedCount')
+let notvisitedCount = document.getElementById('notvisitedCount')
 let notansweredCount = document.getElementById('notansweredCount')
 let answeredCount = document.getElementById('answeredCount')
 let reviewCount = document.getElementById('reviewCount')
 let ansNreviewCount = document.getElementById('ansNreviewCount')
-let numberList = document.getElementById('number-list')
+let numberList = document.getElementById('numlist')
 let radioBtn = document.getElementsByClassName('radio')
 let confirm = document.getElementById('confirm')
 let instructions = document.getElementById('instructions')
 let Marks = 0;
 let index = 0;
 let score = 0;
-let btnIndex = 4
-let response = "" 
+let btnIndex = 5
+let response = ""
 let result = ""
 
 //Set up a temporary array of questions
@@ -121,11 +124,14 @@ let result = ""
 let tempArr = []
 tempArr = questions.map(elem => ({ ...elem, btnIndex: btnIndex, response: response, result: result }))
 
-
 //intialize page
-questionsImg.innerHTML = `<img src=${questions[index].question} alt=""/>`
+questionStatement.innerHTML = `<p>${tempArr[index].questionStatement}</p>`
 questionNumber.innerHTML = `${index + 1}`
-
+questionP.innerHTML = `<p>${tempArr[index].question}</p>`
+directions.innerHTML = `<p>${tempArr[index].directions}</p>`
+for (var j = 0; j < 5; j++) {
+    optionsLabel[`${j}`].innerText = tempArr[index].options[`${j}`]
+}
 
 //Index page proceed button function
 function startTest() {
@@ -147,77 +153,43 @@ function start() {
 
 //Display questions
 function display(i) {
-    questionsImg.innerHTML = `<img src=${questions[i].question} alt=""/>`
-    document.getElementById("response-display").innerHTML = tempArr[i].response
-    questionNumber.innerText = i + 1
-    if (questions[i].section == 1) {
-        document.getElementById('radio-btn').classList.remove('hide')
-        document.getElementById('radio-btn').classList.add('show')
-        document.getElementById('input-response').classList.add('hide')
-        document.getElementById('input-response').classList.remove('show')
-        instructions.innerText = ""
-    } else if (questions[i].section == 2) {
-        document.getElementById('input-response').classList.remove('hide')
-        document.getElementById('input-response').classList.add('show')
-        document.getElementById('radio-btn').classList.add('hide')
-        document.getElementById('radio-btn').classList.remove('show')
-        instructions.innerHTML = `<p>This Section contains 10 questions. Each question is numerical value type. For each question, enter the correct numerical value (in decimal notation, turncated/ rounded-off to second decimal place.) Attempt any five questions out of 10. <br><strong>Marking scheme: +4 for correct answer, 0 if not attempted and 0 in all other cases.</strong></p>`
+    questionStatement.innerHTML = `<p>${tempArr[i].questionStatement}</p>`
+    questionNumber.innerHTML = `${i + 1}`
+    questionP.innerHTML = `<p>${tempArr[i].question}</p>`
+    directions.innerHTML = `<p>${tempArr[i].directions}</p>`
+    for (var j = 0; j < 4; j++) {
+        optionsLabel[`${j}`].innerText = tempArr[i].options[`${j}`]
     }
 }
 
-//Argument passed to display question is taken from index
-function displayQuestion(arg) {
-    query.innerHTML = `<h2>${questions[arg].questionText}</h2>`
-    for (var i = 0; i < 4; i++) {
-      document.getElementById(`btn${i}`).innerText = questions[arg].options[`${i}`]
-    }
-  }
-  
-//Keypad
-let inputVal = document.getElementById('input-value')
-let buttons = document.getElementsByClassName('num-pad-btn')
-let screenValue = "";
-for (item of buttons) {
-    item.addEventListener('click', (e) => {
-        buttonText = e.target.innerText;
-        if (buttonText == 'C') {
-            screenValue = "";
-            inputVal.value = screenValue
-        } else {
-            screenValue += buttonText;
-            inputVal.value = screenValue
-        }
-    })
-}
-//Tag button group
 
 //Save and next
 function saveNext() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || radioBtn[4].checked) {
         let qNum = questionNumber.innerHTML
-        if (!numberList.children[qNum - 1].classList.contains('answered')) {
+        if (!numberList.children[qNum - 1].classList.contains('answered2')) {
             answeredCount.innerHTML = parseInt(answeredCount.innerHTML) + 1;
         }
-        if (numberList.children[qNum - 1].classList.contains('notvisited')) {
-            notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        if (numberList.children[qNum - 1].classList.contains('notvisited2')) {
+            notvisitedCount.innerHTML = parseInt(notvisitedCount.innerHTML) - 1;
         }
-        if (numberList.children[qNum - 1].classList.contains('ansNreview')) {
+        if (numberList.children[qNum - 1].classList.contains('ansNreview2')) {
             ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) - 1;
         }
-        if (numberList.children[qNum - 1].classList.contains('review')) {
+        if (numberList.children[qNum - 1].classList.contains('review2')) {
             reviewCount.innerHTML = parseInt(reviewCount.innerHTML) - 1;
         }
         if (notansweredCount.innerHTML > 0) {
             notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
         }
-        numberList.children[qNum - 1].classList.remove('notvisited');
-        numberList.children[qNum - 1].classList.remove('notanswered');
-        numberList.children[qNum - 1].classList.remove('review');
-        numberList.children[qNum - 1].classList.add('answered');
-        numberList.children[qNum].classList.add('notanswered');
+        numberList.children[qNum - 1].classList.remove('notvisited2');
+        numberList.children[qNum - 1].classList.remove('notanswered2');
+        numberList.children[qNum - 1].classList.remove('review2');
+        numberList.children[qNum - 1].classList.add('answered2');
+        numberList.children[qNum].classList.add('notanswered2');
         index = parseInt(questionNumber.innerText);
         display(index)
-        store()
+        // store()
     }
     else {
         alert("Please choose an option")
@@ -230,64 +202,78 @@ function uncheck() {
     radioBtn[1].checked = false;
     radioBtn[2].checked = false;
     radioBtn[3].checked = false;
+    radioBtn[4].checked = false;
     answeredCount.innerHTML = parseInt(answeredCount.innerHTML) - 1;
     notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
     let qNum = questionNumber.innerHTML
-    numberList.children[qNum - 1].classList.remove('notvisited');
-    numberList.children[qNum - 1].classList.remove('answered');
-    numberList.children[qNum - 1].classList.add('notanswered');
+    numberList.children[qNum - 1].classList.remove('notvisited2');
+    numberList.children[qNum - 1].classList.remove('answered2');
+    numberList.children[qNum - 1].classList.add('notanswered2');
     if (tempArr[qNum - 1].result == "CORRECT") {
         Marks -= 4
-    }else if (tempArr[qNum - 1].result == "INCORRECT"){
+    } else if (tempArr[qNum - 1].result == "INCORRECT") {
         Marks += 1
     }
     tempArr[qNum - 1].result = ""
     tempArr[qNum - 1].response = ""
-    tempArr[qNum - 1].btnIndex = 4
+    tempArr[qNum - 1].btnIndex = 5
 }
 
-//Save and mark for review
-function saveReview() {
-    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || !inputVal.value == "") {
-        let qNum = questionNumber.innerHTML
-        if (!numberList.children[qNum - 1].classList.contains('ansNreview')) {
-            ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
+//Save and mark for review2
+function savereview() {
+    let qNum = questionNumber.innerHTML
+    if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked) {
+        if (radioBtn[0].checked || radioBtn[1].checked || radioBtn[2].checked || radioBtn[3].checked || radioBtn[4].checked) {
+            let qNum = questionNumber.innerHTML
+            if (!numberList.children[qNum - 1].classList.contains('ansNreview2')) {
+                ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) + 1;
+            }
+            if (numberList.children[qNum - 1].classList.contains('notvisited2')) {
+                notvisitedCount.innerHTML = parseInt(notvisitedCount.innerHTML) - 1;
+            }
+            if (numberList.children[qNum - 1].classList.contains('answered2')) {
+                ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) - 1;
+            }
+            if (numberList.children[qNum - 1].classList.contains('review2')) {
+                reviewCount.innerHTML = parseInt(reviewCount.innerHTML) - 1;
+            }
+            if (notansweredCount.innerHTML > 0) {
+                notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
+            }
+            numberList.children[qNum - 1].classList.remove('notvisited2');
+            numberList.children[qNum - 1].classList.remove('notanswered2');
+            numberList.children[qNum - 1].classList.remove('review2');
+            numberList.children[qNum - 1].classList.add('ansNreview2');
+            numberList.children[qNum].classList.add('notanswered2');
+            index = parseInt(questionNumber.innerText);
+            display(index)
+            // store()
         }
-        if (numberList.children[qNum - 1].classList.contains('notvisited')) {
-            notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        else {
+            alert("Please choose an option")
         }
-        if (numberList.children[qNum - 1].classList.contains('answered')) {
-            ansNreviewCount.innerHTML = parseInt(ansNreviewCount.innerHTML) - 1;
-        }
-        if (numberList.children[qNum - 1].classList.contains('review')) {
-            reviewCount.innerHTML = parseInt(reviewCount.innerHTML) - 1;
-        }
-        if (notansweredCount.innerHTML > 0) {
-            notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) - 1;
-        }
-        numberList.children[qNum - 1].classList.remove('notvisited');
-        numberList.children[qNum - 1].classList.remove('notanswered');
-        numberList.children[qNum - 1].classList.remove('review');
-        numberList.children[qNum - 1].classList.add('ansNreview');
-        numberList.children[qNum].classList.add('notanswered');
+    } else {
+        reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
+        notvisitedCount.innerHTML = parseInt(notvisitedCount.innerHTML) - 1;
+        let qNum = questionNumber.innerHTML;
+        numberList.children[qNum - 1].classList.remove('notvisited2');
+        numberList.children[qNum - 1].classList.remove('notanswered2');
+        numberList.children[qNum - 1].classList.add('review2');
+        numberList.children[qNum].classList.add('notanswered2');
         index = parseInt(questionNumber.innerText);
         display(index)
-        store()
     }
-    else {
-        alert("Please choose an option")
-    }
- }
+}
 
-//Mark for review and next
+//Mark for review2 and next
 function reviewNext() {
     reviewCount.innerHTML = parseInt(reviewCount.innerHTML) + 1;
-    notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+    notvisitedCount.innerHTML = parseInt(notvisitedCount.innerHTML) - 1;
     let qNum = questionNumber.innerHTML;
-    numberList.children[qNum - 1].classList.remove('notvisited');
-    numberList.children[qNum - 1].classList.remove('notanswered');
-    numberList.children[qNum - 1].classList.add('review');
-    numberList.children[qNum].classList.add('notanswered');
+    numberList.children[qNum - 1].classList.remove('notvisited2');
+    numberList.children[qNum - 1].classList.remove('notanswered2');
+    numberList.children[qNum - 1].classList.add('review2');
+    numberList.children[qNum].classList.add('notanswered2');
     index = parseInt(questionNumber.innerText);
     display(index)
 }
@@ -295,13 +281,13 @@ function reviewNext() {
 
 //Update number board with CSS
 function gotoQuestion(q) {
-    if (numberList.children[q - 1].classList.contains('notvisited')) {
+    if (numberList.children[q - 1].classList.contains('notvisited2')) {
         notansweredCount.innerHTML = parseInt(notansweredCount.innerHTML) + 1;
-        notVisitedCount.innerHTML = parseInt(notVisitedCount.innerHTML) - 1;
+        notvisitedCount.innerHTML = parseInt(notvisitedCount.innerHTML) - 1;
     }
     display(q - 1);
-    numberList.children[q - 1].classList.remove('notvisited');
-    numberList.children[q - 1].classList.add('notanswered');
+    numberList.children[q - 1].classList.remove('notvisited2');
+    numberList.children[q - 1].classList.add('notanswered22');
     radioBtn[tempArr[q - 1].btnIndex].checked = true
 }
 
@@ -343,13 +329,13 @@ function store() {
     let qNum = questionNumber.innerHTML - 1
 
     if (questions[qNum - 1].section == 1) {
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             if (radioBtn[i].checked) {
                 tempArr[qNum - 1].response = radioBtn[i].value
                 tempArr[qNum - 1].btnIndex = i;
-                if(tempArr[qNum-1].result=="CORRECT"){
+                if (tempArr[qNum - 1].result == "CORRECT") {
                     Marks += 0
-                }else{
+                } else {
                     if (radioBtn[i].value == questions[qNum - 1].answer) {
                         tempArr[qNum - 1].result = "CORRECT"
                         Marks += 4

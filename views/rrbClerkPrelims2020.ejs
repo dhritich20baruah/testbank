@@ -23,24 +23,24 @@
             show the status of each question using one of the following symbols:
             <ol>
               <li>
-                <div class="notvisited2" id="notvisited2Count"></div>
+                <div class="notvisited2"></div>
                 You have not visited the question yet.
               </li>
               <li>
-                <div class="notanswered2" id="notanswered2Count"></div>
+                <div class="notanswered2"></div>
                 You have not answered the question.
               </li>
               <li>
-                <div class="answered" id="answeredCount"></div>
+                <div class="answered2"></div>
                 You have answered the question.
               </li>
               <li>
-                <div class="review" id="reviewCount"></div>
+                <div class="review2"></div>
                 You have NOT answered the question, but have marked the question
                 for review.
               </li>
               <li>
-                <div class="ansNreview" id="ansNreviewCount"></div>
+                <div class="ansNreview2"></div>
                 The question(s) &quot;Answered and Marked for Review&quot; will
                 be considered for evalution.
               </li>
@@ -240,71 +240,66 @@
         <div id="direction-option">
           <div id="direction">
             <p>
-              <strong>Direction:</strong
-              ><span id="direction-title"
-                >We will find our destination even if we have to wander. Misled
-                are those who never stepped out.</span
-              >
+              <strong>Direction:</strong>
+              <span id="direction-title">We will find our destination even if we have to wander. Misled are those who never stepped out.</span>
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              id, nostrum laboriosam qui veniam voluptatum incidunt ad sint
-              voluptatem recusandae ex nam consectetur soluta corporis
-              doloremque voluptatibus eligendi mollitia maiores. Assumenda
-              minima distinctio error voluptatum a inventore incidunt,
-              accusantium commodi?
-            </p>
+            <p id="questionStatement"> </p>
           </div>
           <div id="responses">
-            <p>How Many boxes are placed below E?</p>
+            <p id="questionP">How Many boxes are placed below E?</p>
             <label for="a">
               <div class="radioLabels">
-                <input type="radio" name="option" id="a" />Option1
+                <input type="radio" name="option" id="a" class="radio" /><span class="optionInput"></span>
               </div>
             </label>
             <label for="b">
               <div class="radioLabels">
-                <input type="radio" name="option" id="b" />Option2
+                <input type="radio" name="option" id="b" class="radio" /><span class="optionInput"></span>
               </div>
             </label>
             <label for="c">
               <div class="radioLabels">
-                <input type="radio" name="option" id="c" />Option3
+                <input type="radio" name="option" id="c" class="radio" /><span class="optionInput"></span>
               </div>
             </label>
             <label for="d">
               <div class="radioLabels">
-                <input type="radio" name="option" id="d" />Option4
+                <input type="radio" name="option" id="d" class="radio" /><span class="optionInput"></span>
               </div>
             </label>
             <label for="e">
               <div class="radioLabels">
-                <input type="radio" name="option" id="e" />Option5
+                <input type="radio" name="option" id="e" class="radio" /><span class="optionInput"></span>
+              </div>
+            </label>
+            <label for="f" class="hide">
+              <div class="radioLabels">
+                <input type="radio" name="option" id="e"  class="radio" checked/><span class="optionInput"></span>
               </div>
             </label>
           </div>
         </div>
         <div id="question-btns">
           <div id="clearNmark-btns">
-            <button>Clear Response</button>
-            <button>Mark for Review</button>
+            <button onclick="uncheck()">Clear Response</button>
+            <button onclick="savereview()">Mark for Review</button>
           </div>
           <div id="saveNnext-btn">
-            <button>Save & Next</button>
+            <button onclick="saveNext()">Save & Next</button>
           </div>
         </div>
       </div>
       <div id="right">
-        <div id="timer-nav">Time left:</div>
+        <div id="timer-nav">Time left:<span id="timer"></span></div>
         <div id="profile"></div>
         <div id="question-counter">
           <ul>
             <li>
-              <div class="notvisited2" id="notvisited2Count">74</div>
+              <div class="notvisited2" id="notvisitedCount">80</div>
             </li>
             <li>Not visited</li>
             <li>
-              <div class="notanswered2" id="notanswered2Count">0</div>
+              <div class="notanswered2" id="notansweredCount">0</div>
             </li>
             <li>Not answered</li>
           </ul>
@@ -320,7 +315,7 @@
           </ul>
           <ul>
             <li>
-              <div class="ansNreview2" id="ansNreviewCount2">0</div>
+              <div class="ansNreview2" id="ansNreviewCount">0</div>
             </li>
             <li>
               Answered &amp; Marked for Review (will be considered for
@@ -332,7 +327,7 @@
           <p><strong>Section : </strong><span></span></p>
         </div>
         <div id="question-palette">
-          <ul id="num-list" class="display-flex">
+          <ul id="numlist" class="display-flex">
             <li onclick="gotoQuestion(1)" class="notanswered2">1</li>
             <li onclick="gotoQuestion(2)" class="notvisited2">2</li>
             <li onclick="gotoQuestion(3)" class="notvisited2">3</li>
@@ -374,7 +369,7 @@
             <li onclick="gotoQuestion(39)" class="notvisited2">39</li>
             <li onclick="gotoQuestion(40)" class="notvisited2">40</li>
           </ul>
-           <ul id="num-list2" class="hide">              
+          <ul class="hide numlist">
             <li onclick="gotoQuestion(41)" class="notvisited2">41</li>
             <li onclick="gotoQuestion(42)" class="notvisited2">42</li>
             <li onclick="gotoQuestion(43)" class="notvisited2">43</li>
@@ -420,9 +415,6 @@
         <button id="submit-btn">Submit Test</button>
       </div>
     </section>
-    <script src="../static/jeemain2021shift1.js"></script>
-    <script>
-      document.querySelectorAll("label").innerHTML = "HEllo";
-    </script>
+    <script src="../static/rrbclerk2020.js"></script>
   </body>
 </html>
