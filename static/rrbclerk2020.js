@@ -328,34 +328,21 @@ var x = setInterval(function () {
 function store() {
     let qNum = questionNumber.innerHTML - 1
 
-    if (questions[qNum - 1].section == 1) {
-        for (var i = 0; i < 5; i++) {
-            if (radioBtn[i].checked) {
-                tempArr[qNum - 1].response = radioBtn[i].value
-                tempArr[qNum - 1].btnIndex = i;
-                if (tempArr[qNum - 1].result == "CORRECT") {
-                    Marks += 0
+    for (var i = 0; i < 5; i++) {
+        if (radioBtn[i].checked) {
+            tempArr[qNum - 1].response = radioBtn[i].value
+            tempArr[qNum - 1].btnIndex = i;
+            if (tempArr[qNum - 1].result == "CORRECT") {
+                Marks += 0
+            } else {
+                if (radioBtn[i].value == questions[qNum - 1].answer) {
+                    tempArr[qNum - 1].result = "CORRECT"
+                    Marks += 4
                 } else {
-                    if (radioBtn[i].value == questions[qNum - 1].answer) {
-                        tempArr[qNum - 1].result = "CORRECT"
-                        Marks += 4
-                    } else {
-                        tempArr[qNum - 1].result = "INCORRECT"
-                        Marks -= 1
-                    }
+                    tempArr[qNum - 1].result = "INCORRECT"
+                    Marks -= 1
                 }
             }
-        }
-    }
-    else if (questions[qNum - 1].section == 2) {
-        tempArr[qNum - 1].response = inputVal.value
-
-        if (questions[qNum - 1].answer == parseFloat(inputVal.value)) {
-            tempArr[qNum - 1].result = "CORRECT"
-            Marks += 4
-        } else {
-            tempArr[qNum - 1].result = "INCORRECT"
-            Marks -= 0
         }
     }
 
