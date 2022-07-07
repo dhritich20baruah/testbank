@@ -3,7 +3,7 @@
   <%- include('./partials/head.ejs') %>
 
   <body>
-    <section id="instructions" class="hide">
+    <section id="instructions" class="">
       <h2 class="title1">IBPS RRB CLERK PRELIMS 2020</h2>
       <div class="instructionspage">
         <div class="title2">
@@ -140,9 +140,9 @@
         </ol>
         <hr />
         <div class="btndiv">
-          <a href="/rrbClerkPrelimsQuestions2020">
-            <button class="btn" id="proceed">PROCEED</button>
-          </a>
+          <button class="btn" id="proceed" onclick="instructionsDisplay()">
+            PROCEED
+          </button>
         </div>
       </div>
     </section>
@@ -203,14 +203,16 @@
         </p>
         <p id="prev-btn-check">
           <button id="preBtn">Previous</button>
-          <input type="checkbox" />
-          <strong>
-            The system provided to me is in proper working condition. I have
-            read and understood the instructions given to me.
-          </strong>
+          <label>
+            <input type="checkbox" id="confirm" />
+            <strong>
+              The system provided to me is in proper working condition. I have
+              read and understood the instructions given to me.
+            </strong>
+          </label>
         </p>
       </div>
-      <div id="ready">I am ready to begin.</div>
+      <div id="ready" onclick="startTest()">I am ready to begin.</div>
       <div class="hide" id="warning1">
         <h1>Warning</h1>
         <h3>
@@ -220,199 +222,240 @@
         <button id="warning-ok" onclick="hideWarning()">OK</button>
       </div>
     </section>
-    <section id="test-body">
-      <div id="left">
-        <div id="Qpaper-nav">
-          <h3>IBPS RRB Officer Scale I Pre 2021</h3>
-          <div id="q-navbar">
-            <button id="btnQpaper">Question Paper</button>
-            <button id="btnInst">Instructions</button>
+    <section id="test-page" class="hide">
+      <div id="test-body" class="hide">
+        <div id="left">
+          <div id="Qpaper-nav">
+            <h3>IBPS RRB Officer Scale I Pre 2021</h3>
+            <div id="q-navbar">
+              <button id="btnQpaper">Question Paper</button>
+              <button id="btnInst">Instructions</button>
+            </div>
           </div>
-        </div>
-        <div id="section-tabs">
-          <p>
-            <strong>Sections: </strong>
-            <button id="reasoning">Reasoning</button>
-            <button id="quantitative">Quantitative Aptitude</button>
-          </p>
-        </div>
-        <h3 id="question-num">Question <span id="qnum"></span></h3>
-        <div id="direction-option">
-          <div id="direction">
+          <div id="section-tabs">
             <p>
-              <strong>Direction:</strong>
-              <span id="direction-title">We will find our destination even if we have to wander. Misled are those who never stepped out.</span>
+              <strong>Sections: </strong>
+              <button id="reasoning">Reasoning</button>
+              <button id="quantitative">Quantitative Aptitude</button>
             </p>
-            <p id="questionStatement"> </p>
           </div>
-          <div id="responses">
-            <p id="questionP">How Many boxes are placed below E?</p>
-            <label for="a">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="a" class="radio" /><span class="optionInput"></span>
-              </div>
-            </label>
-            <label for="b">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="b" class="radio" /><span class="optionInput"></span>
-              </div>
-            </label>
-            <label for="c">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="c" class="radio" /><span class="optionInput"></span>
-              </div>
-            </label>
-            <label for="d">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="d" class="radio" /><span class="optionInput"></span>
-              </div>
-            </label>
-            <label for="e">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="e" class="radio" /><span class="optionInput"></span>
-              </div>
-            </label>
-            <label for="f" class="hide">
-              <div class="radioLabels">
-                <input type="radio" name="option" id="e"  class="radio" checked/><span class="optionInput"></span>
-              </div>
-            </label>
+          <h3 id="question-num">Question <span id="qnum"></span></h3>
+          <div id="direction-option">
+            <div id="direction">
+              <p>
+                <strong>Direction:</strong>
+                <span id="direction-title"
+                  >We will find our destination even if we have to wander.
+                  Misled are those who never stepped out.</span
+                >
+              </p>
+              <p id="questionStatement"></p>
+            </div>
+            <div id="responses">
+              <p id="questionP">How Many boxes are placed below E?</p>
+              <label for="a">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="a"
+                    class="radio"
+                    value="a"
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+              <label for="b">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="b"
+                    class="radio"
+                    value="b"
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+              <label for="c">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="c"
+                    class="radio"
+                    value="c"
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+              <label for="d">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="d"
+                    class="radio"
+                    value="d"
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+              <label for="e">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="e"
+                    class="radio"
+                    value="e"
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+              <label for="f" class="hide">
+                <div class="radioLabels">
+                  <input
+                    type="radio"
+                    name="option"
+                    id="e"
+                    class="radio"
+                    checked
+                  /><span class="optionInput"></span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div id="question-btns">
+            <div id="clearNmark-btns">
+              <button onclick="uncheck()">Clear Response</button>
+              <button onclick="savereview()">Mark for Review</button>
+            </div>
+            <div id="saveNnext-btn">
+              <button onclick="saveNext()">Save & Next</button>
+            </div>
           </div>
         </div>
-        <div id="question-btns">
-          <div id="clearNmark-btns">
-            <button onclick="uncheck()">Clear Response</button>
-            <button onclick="savereview()">Mark for Review</button>
+        <div id="right">
+          <div id="timer-nav">Time left:<span id="timer"></span></div>
+          <div id="profile"></div>
+          <div id="question-counter">
+            <ul>
+              <li>
+                <div class="notvisited2" id="notvisitedCount">79</div>
+              </li>
+              <li>Not visited</li>
+              <li>
+                <div class="notanswered2" id="notansweredCount">0</div>
+              </li>
+              <li>Not answered</li>
+            </ul>
+            <ul>
+              <li>
+                <div class="answered2" id="answeredCount">0</div>
+              </li>
+              <li>Answered</li>
+              <li>
+                <div class="review2" id="reviewCount">0</div>
+              </li>
+              <li>Marked for review</li>
+            </ul>
+            <ul>
+              <li>
+                <div class="ansNreview2" id="ansNreviewCount">0</div>
+              </li>
+              <li>
+                Answered &amp; Marked for Review (will be considered for
+                evaluation)
+              </li>
+            </ul>
           </div>
-          <div id="saveNnext-btn">
-            <button onclick="saveNext()">Save & Next</button>
+          <div id="section-title">
+            <p><strong>Section : </strong><span></span></p>
           </div>
+          <div id="question-palette">
+            <ul id="numlist" class="display-flex">
+              <li onclick="gotoQuestion(1)" class="notanswered2">1</li>
+              <li onclick="gotoQuestion(2)" class="notvisited2">2</li>
+              <li onclick="gotoQuestion(3)" class="notvisited2">3</li>
+              <li onclick="gotoQuestion(4)" class="notvisited2">4</li>
+              <li onclick="gotoQuestion(5)" class="notvisited2">5</li>
+              <li onclick="gotoQuestion(6)" class="notvisited2">6</li>
+              <li onclick="gotoQuestion(7)" class="notvisited2">7</li>
+              <li onclick="gotoQuestion(8)" class="notvisited2">8</li>
+              <li onclick="gotoQuestion(9)" class="notvisited2">9</li>
+              <li onclick="gotoQuestion(10)" class="notvisited2">10</li>
+              <li onclick="gotoQuestion(11)" class="notvisited2">11</li>
+              <li onclick="gotoQuestion(12)" class="notvisited2">12</li>
+              <li onclick="gotoQuestion(13)" class="notvisited2">13</li>
+              <li onclick="gotoQuestion(14)" class="notvisited2">14</li>
+              <li onclick="gotoQuestion(15)" class="notvisited2">15</li>
+              <li onclick="gotoQuestion(16)" class="notvisited2">16</li>
+              <li onclick="gotoQuestion(17)" class="notvisited2">17</li>
+              <li onclick="gotoQuestion(18)" class="notvisited2">18</li>
+              <li onclick="gotoQuestion(19)" class="notvisited2">19</li>
+              <li onclick="gotoQuestion(20)" class="notvisited2">20</li>
+              <li onclick="gotoQuestion(21)" class="notvisited2">21</li>
+              <li onclick="gotoQuestion(22)" class="notvisited2">22</li>
+              <li onclick="gotoQuestion(23)" class="notvisited2">23</li>
+              <li onclick="gotoQuestion(24)" class="notvisited2">24</li>
+              <li onclick="gotoQuestion(25)" class="notvisited2">25</li>
+              <li onclick="gotoQuestion(26)" class="notvisited2">26</li>
+              <li onclick="gotoQuestion(27)" class="notvisited2">27</li>
+              <li onclick="gotoQuestion(28)" class="notvisited2">28</li>
+              <li onclick="gotoQuestion(29)" class="notvisited2">29</li>
+              <li onclick="gotoQuestion(30)" class="notvisited2">30</li>
+              <li onclick="gotoQuestion(31)" class="notvisited2">31</li>
+              <li onclick="gotoQuestion(32)" class="notvisited2">32</li>
+              <li onclick="gotoQuestion(33)" class="notvisited2">33</li>
+              <li onclick="gotoQuestion(34)" class="notvisited2">34</li>
+              <li onclick="gotoQuestion(35)" class="notvisited2">35</li>
+              <li onclick="gotoQuestion(36)" class="notvisited2">36</li>
+              <li onclick="gotoQuestion(37)" class="notvisited2">37</li>
+              <li onclick="gotoQuestion(38)" class="notvisited2">38</li>
+              <li onclick="gotoQuestion(39)" class="notvisited2">39</li>
+              <li onclick="gotoQuestion(40)" class="notvisited2">40</li>
+            </ul>
+            <ul class="hide numlist">
+              <li onclick="gotoQuestion(41)" class="notvisited2">41</li>
+              <li onclick="gotoQuestion(42)" class="notvisited2">42</li>
+              <li onclick="gotoQuestion(43)" class="notvisited2">43</li>
+              <li onclick="gotoQuestion(44)" class="notvisited2">44</li>
+              <li onclick="gotoQuestion(45)" class="notvisited2">45</li>
+              <li onclick="gotoQuestion(46)" class="notvisited2">46</li>
+              <li onclick="gotoQuestion(47)" class="notvisited2">47</li>
+              <li onclick="gotoQuestion(48)" class="notvisited2">48</li>
+              <li onclick="gotoQuestion(49)" class="notvisited2">49</li>
+              <li onclick="gotoQuestion(50)" class="notvisited2">50</li>
+              <li onclick="gotoQuestion(51)" class="notvisited2">51</li>
+              <li onclick="gotoQuestion(52)" class="notvisited2">52</li>
+              <li onclick="gotoQuestion(53)" class="notvisited2">53</li>
+              <li onclick="gotoQuestion(54)" class="notvisited2">54</li>
+              <li onclick="gotoQuestion(55)" class="notvisited2">55</li>
+              <li onclick="gotoQuestion(56)" class="notvisited2">56</li>
+              <li onclick="gotoQuestion(57)" class="notvisited2">57</li>
+              <li onclick="gotoQuestion(58)" class="notvisited2">58</li>
+              <li onclick="gotoQuestion(59)" class="notvisited2">59</li>
+              <li onclick="gotoQuestion(60)" class="notvisited2">60</li>
+              <li onclick="gotoQuestion(61)" class="notvisited2">61</li>
+              <li onclick="gotoQuestion(62)" class="notvisited2">62</li>
+              <li onclick="gotoQuestion(63)" class="notvisited2">63</li>
+              <li onclick="gotoQuestion(64)" class="notvisited2">64</li>
+              <li onclick="gotoQuestion(65)" class="notvisited2">65</li>
+              <li onclick="gotoQuestion(66)" class="notvisited2">66</li>
+              <li onclick="gotoQuestion(67)" class="notvisited2">67</li>
+              <li onclick="gotoQuestion(68)" class="notvisited2">68</li>
+              <li onclick="gotoQuestion(69)" class="notvisited2">69</li>
+              <li onclick="gotoQuestion(70)" class="notvisited2">70</li>
+              <li onclick="gotoQuestion(71)" class="notvisited2">71</li>
+              <li onclick="gotoQuestion(72)" class="notvisited2">72</li>
+              <li onclick="gotoQuestion(73)" class="notvisited2">73</li>
+              <li onclick="gotoQuestion(74)" class="notvisited2">74</li>
+              <li onclick="gotoQuestion(75)" class="notvisited2">75</li>
+              <li onclick="gotoQuestion(76)" class="notvisited2">76</li>
+              <li onclick="gotoQuestion(77)" class="notvisited2">77</li>
+              <li onclick="gotoQuestion(78)" class="notvisited2">78</li>
+              <li onclick="gotoQuestion(79)" class="notvisited2">79</li>
+              <li onclick="gotoQuestion(80)" class="notvisited2">80</li>
+            </ul>
+          </div>
+          <button id="submit-btn">Submit Test</button>
         </div>
-      </div>
-      <div id="right">
-        <div id="timer-nav">Time left:<span id="timer"></span></div>
-        <div id="profile"></div>
-        <div id="question-counter">
-          <ul>
-            <li>
-              <div class="notvisited2" id="notvisitedCount">80</div>
-            </li>
-            <li>Not visited</li>
-            <li>
-              <div class="notanswered2" id="notansweredCount">0</div>
-            </li>
-            <li>Not answered</li>
-          </ul>
-          <ul>
-            <li>
-              <div class="answered2" id="answeredCount">0</div>
-            </li>
-            <li>Answered</li>
-            <li>
-              <div class="review2" id="reviewCount">0</div>
-            </li>
-            <li>Marked for review</li>
-          </ul>
-          <ul>
-            <li>
-              <div class="ansNreview2" id="ansNreviewCount">0</div>
-            </li>
-            <li>
-              Answered &amp; Marked for Review (will be considered for
-              evaluation)
-            </li>
-          </ul>
-        </div>
-        <div id="section-title">
-          <p><strong>Section : </strong><span></span></p>
-        </div>
-        <div id="question-palette">
-          <ul id="numlist" class="display-flex">
-            <li onclick="gotoQuestion(1)" class="notanswered2">1</li>
-            <li onclick="gotoQuestion(2)" class="notvisited2">2</li>
-            <li onclick="gotoQuestion(3)" class="notvisited2">3</li>
-            <li onclick="gotoQuestion(4)" class="notvisited2">4</li>
-            <li onclick="gotoQuestion(5)" class="notvisited2">5</li>
-            <li onclick="gotoQuestion(6)" class="notvisited2">6</li>
-            <li onclick="gotoQuestion(7)" class="notvisited2">7</li>
-            <li onclick="gotoQuestion(8)" class="notvisited2">8</li>
-            <li onclick="gotoQuestion(9)" class="notvisited2">9</li>
-            <li onclick="gotoQuestion(10)" class="notvisited2">10</li>
-            <li onclick="gotoQuestion(11)" class="notvisited2">11</li>
-            <li onclick="gotoQuestion(12)" class="notvisited2">12</li>
-            <li onclick="gotoQuestion(13)" class="notvisited2">13</li>
-            <li onclick="gotoQuestion(14)" class="notvisited2">14</li>
-            <li onclick="gotoQuestion(15)" class="notvisited2">15</li>
-            <li onclick="gotoQuestion(16)" class="notvisited2">16</li>
-            <li onclick="gotoQuestion(17)" class="notvisited2">17</li>
-            <li onclick="gotoQuestion(18)" class="notvisited2">18</li>
-            <li onclick="gotoQuestion(19)" class="notvisited2">19</li>
-            <li onclick="gotoQuestion(20)" class="notvisited2">20</li>
-            <li onclick="gotoQuestion(21)" class="notvisited2">21</li>
-            <li onclick="gotoQuestion(22)" class="notvisited2">22</li>
-            <li onclick="gotoQuestion(23)" class="notvisited2">23</li>
-            <li onclick="gotoQuestion(24)" class="notvisited2">24</li>
-            <li onclick="gotoQuestion(25)" class="notvisited2">25</li>
-            <li onclick="gotoQuestion(26)" class="notvisited2">26</li>
-            <li onclick="gotoQuestion(27)" class="notvisited2">27</li>
-            <li onclick="gotoQuestion(28)" class="notvisited2">28</li>
-            <li onclick="gotoQuestion(29)" class="notvisited2">29</li>
-            <li onclick="gotoQuestion(30)" class="notvisited2">30</li>
-            <li onclick="gotoQuestion(31)" class="notvisited2">31</li>
-            <li onclick="gotoQuestion(32)" class="notvisited2">32</li>
-            <li onclick="gotoQuestion(33)" class="notvisited2">33</li>
-            <li onclick="gotoQuestion(34)" class="notvisited2">34</li>
-            <li onclick="gotoQuestion(35)" class="notvisited2">35</li>
-            <li onclick="gotoQuestion(36)" class="notvisited2">36</li>
-            <li onclick="gotoQuestion(37)" class="notvisited2">37</li>
-            <li onclick="gotoQuestion(38)" class="notvisited2">38</li>
-            <li onclick="gotoQuestion(39)" class="notvisited2">39</li>
-            <li onclick="gotoQuestion(40)" class="notvisited2">40</li>
-          </ul>
-          <ul class="hide numlist">
-            <li onclick="gotoQuestion(41)" class="notvisited2">41</li>
-            <li onclick="gotoQuestion(42)" class="notvisited2">42</li>
-            <li onclick="gotoQuestion(43)" class="notvisited2">43</li>
-            <li onclick="gotoQuestion(44)" class="notvisited2">44</li>
-            <li onclick="gotoQuestion(45)" class="notvisited2">45</li>
-            <li onclick="gotoQuestion(46)" class="notvisited2">46</li>
-            <li onclick="gotoQuestion(47)" class="notvisited2">47</li>
-            <li onclick="gotoQuestion(48)" class="notvisited2">48</li>
-            <li onclick="gotoQuestion(49)" class="notvisited2">49</li>
-            <li onclick="gotoQuestion(50)" class="notvisited2">50</li>
-            <li onclick="gotoQuestion(51)" class="notvisited2">51</li>
-            <li onclick="gotoQuestion(52)" class="notvisited2">52</li>
-            <li onclick="gotoQuestion(53)" class="notvisited2">53</li>
-            <li onclick="gotoQuestion(54)" class="notvisited2">54</li>
-            <li onclick="gotoQuestion(55)" class="notvisited2">55</li>
-            <li onclick="gotoQuestion(56)" class="notvisited2">56</li>
-            <li onclick="gotoQuestion(57)" class="notvisited2">57</li>
-            <li onclick="gotoQuestion(58)" class="notvisited2">58</li>
-            <li onclick="gotoQuestion(59)" class="notvisited2">59</li>
-            <li onclick="gotoQuestion(60)" class="notvisited2">60</li>
-            <li onclick="gotoQuestion(61)" class="notvisited2">61</li>
-            <li onclick="gotoQuestion(62)" class="notvisited2">62</li>
-            <li onclick="gotoQuestion(63)" class="notvisited2">63</li>
-            <li onclick="gotoQuestion(64)" class="notvisited2">64</li>
-            <li onclick="gotoQuestion(65)" class="notvisited2">65</li>
-            <li onclick="gotoQuestion(66)" class="notvisited2">66</li>
-            <li onclick="gotoQuestion(67)" class="notvisited2">67</li>
-            <li onclick="gotoQuestion(68)" class="notvisited2">68</li>
-            <li onclick="gotoQuestion(69)" class="notvisited2">69</li>
-            <li onclick="gotoQuestion(70)" class="notvisited2">70</li>
-            <li onclick="gotoQuestion(71)" class="notvisited2">71</li>
-            <li onclick="gotoQuestion(72)" class="notvisited2">72</li>
-            <li onclick="gotoQuestion(73)" class="notvisited2">73</li>
-            <li onclick="gotoQuestion(74)" class="notvisited2">74</li>
-            <li onclick="gotoQuestion(75)" class="notvisited2">75</li>
-            <li onclick="gotoQuestion(76)" class="notvisited2">76</li>
-            <li onclick="gotoQuestion(77)" class="notvisited2">77</li>
-            <li onclick="gotoQuestion(78)" class="notvisited2">78</li>
-            <li onclick="gotoQuestion(79)" class="notvisited2">79</li>
-            <li onclick="gotoQuestion(80)" class="notvisited2">80</li>
-          </ul>
-        </div>
-        <button id="submit-btn">Submit Test</button>
       </div>
     </section>
     <script src="../static/rrbclerk2020.js"></script>

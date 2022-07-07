@@ -583,7 +583,7 @@ body{
     width: 2.2em;
     height: 2.2em;
     border: 0.25px solid grey;
-    background: linear-gradient(180deg, rgb(190, 185, 185), white);
+    background: white;
     border-radius: 5px;
     text-align: center;
   }
