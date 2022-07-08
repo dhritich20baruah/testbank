@@ -1,5 +1,5 @@
-// We will find our destination even if we have to wander. Misled
-// are those who never stepped out.
+// We will find our destination even if we have to wander. 
+// Misled are those who never stepped out.
 const questions = [
     {
         "number": "1",
@@ -88,7 +88,106 @@ const questions = [
         "questionStatement": "Five persons A, B, C, D and E have different heights. Less than two persons are shorter than D. As many persons are taller than D as shorter than C. A is taller than B but shorter than E. B is not the shortest person. The height of third tallest person is 86 cm.",
         "question": "If the height of shortest person is 68 cm, then what may be the height of B?",
         "options": ["69cm", "81cm", "78cm", "All the given heights", "None of these"],
+        "answer": "",
+        "section": 1
+    },
+    {
+        "number": "11",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Five persons A, B, C, D and E have different heights. Less than two persons are shorter than D. As many persons are taller than D as shorter than C. A is taller than B but shorter than E. B is not the shortest person. The height of third tallest person is 86 cm.",
+        "question": "How many persons are taller than C?",
+        "options": ["None", "One", "Two", "Three", "None of these"],
+        "answer": "",
+        "section": 1
+    },
+    {
+        "number": "12",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Five persons A, B, C, D and E have different heights. Less than two persons are shorter than D. As many persons are taller than D as shorter than C. A is taller than B but shorter than E. B is not the shortest person. The height of third tallest person is 86 cm.",
+        "question": "Who among the following is just shorter than E?",
+        "options": ["None", "C", "A", "D", "None of these"],
+        "answer": "",
+        "section": 1
+    },
+    {
+        "number": "13",
+        "directions": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+        "questionStatement": "Statements: All Greens are Yellows. No Yellows are Black.",
+        "question": "Conclusions: I. No Greens are Black. II. Some Greens are Black.",
+        "options": ["If only conclusion I follows.", "If only conclusion II follows.", "If either conclusion I or II follows.", "If neither conclusion I nor II follows.", "If both conclusions I and II follow."],
+        "answer": "a",
+        "section": 1
+    },
+    {
+        "number": "14",
+        "directions": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+        "questionStatement": "Statements: All Chairs are Sofas. Only a few Sofas are Beds. No Beds are Curtains.",
+        "question": "Conclusions: I. Some Sofas are not Beds. II. Some Sofas are not Curtains.",
+        "options": ["If only conclusion I follows.", "If only conclusion II follows.", "If either conclusion I or II follows.", "If neither conclusion I nor II follows.", "If both conclusions I and II follow."],
+        "answer": "e",
+        "section": 1
+    },
+    {
+        "number": "15",
+        "directions": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+        "questionStatement": "Statements: Only a few Coffee are Tea. All Tea is Drinks. Only a few Drinks are Cold drinks.",
+        "question": "Conclusions: I. Some Tea is not Cold drinks. II. No Coffee are Drinks.",
+        "options": ["If only conclusion I follows.", "If only conclusion II follows.", "If either conclusion I or II follows.", "If neither conclusion I nor II follows.", "If both conclusions I and II follow."],
+        "answer": "d",
+        "section": 1
+    },
+    {
+        "number": "16",
+        "directions": "In each of the questions below are given some statements followed by some conclusions. You have to take the given statements to be true even if they seem to be at variance with commonly known facts. Read all the conclusions and then decide which of the given conclusions logically follows from the given statements disregarding commonly known facts.",
+        "questionStatement": "Statements: All Flowers are Trees. Only a few Trees are Gardens. No Gardens are Lawns.",
+        "question": "Conclusions: I. All Lawns can never be Trees. II. Some Flowers can be Gardens.",
+        "options": ["If only conclusion I follows.", "If only conclusion II follows.", "If either conclusion I or II follows.", "If neither conclusion I nor II follows.", "If both conclusions I and II follow."],
         "answer": "b",
+        "section": 1
+    },
+    {
+        "number": "17",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Seven persons A, B, C, D, E, F and G are sitting in row and all are facing towards north but not necessarily in the same order. B sits second from one of the extreme ends. Three persons sit between D and B. Two persons sit between D and A. C sits to the immediate left of A. F sits to left of C but is not an immediate neighbour of C. More than two persons sit between F and E.",
+        "question": "How many persons sit to the left of F?",
+        "options": ["Two", "None", "One", "Three", "None of these"],
+        "answer": "b",
+        "section": 1
+    },
+    {
+        "number": "18",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Seven persons A, B, C, D, E, F and G are sitting in row and all are facing towards north but not necessarily in the same order. B sits second from one of the extreme ends. Three persons sit between D and B. Two persons sit between D and A. C sits to the immediate left of A. F sits to left of C but is not an immediate neighbour of C. More than two persons sit between F and E.",
+        "question": "Who among the following sits third to the right of G?",
+        "options": ["E", "C", "B", "F", "None of these"],
+        "answer": "c",
+        "section": 1
+    },
+    {
+        "number": "19",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Seven persons A, B, C, D, E, F and G are sitting in row and all are facing towards north but not necessarily in the same order. B sits second from one of the extreme ends. Three persons sit between D and B. Two persons sit between D and A. C sits to the immediate left of A. F sits to left of C but is not an immediate neighbour of C. More than two persons sit between F and E.",
+        "question": "Who among the following persons sit at the extreme ends?",
+        "options": ["F,A", "A,E", "G,E", "F,E", "None of these"],
+        "answer": "d",
+        "section": 1
+    },
+    {
+        "number": "20",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Seven persons A, B, C, D, E, F and G are sitting in row and all are facing towards north but not necessarily in the same order. B sits second from one of the extreme ends. Three persons sit between D and B. Two persons sit between D and A. C sits to the immediate left of A. F sits to left of C but is not an immediate neighbour of C. More than two persons sit between F and E.",
+        "question": "How many persons sit between D and E?",
+        "options": ["Two", "Four", "Three", "One", "None of these"],
+        "answer": "b",
+        "section": 1
+    },
+    {
+        "number": "21",
+        "directions": "Study the following information carefully and answer the questions given below:",
+        "questionStatement": "Seven persons A, B, C, D, E, F and G are sitting in row and all are facing towards north but not necessarily in the same order. B sits second from one of the extreme ends. Three persons sit between D and B. Two persons sit between D and A. C sits to the immediate left of A. F sits to left of C but is not an immediate neighbour of C. More than two persons sit between F and E.",
+        "question": "Who among the following sits to the immediate left of E?",
+        "options": ["G", "A", "B", "D", "None of these"],
+        "answer": "c",
         "section": 1
     },
 ]
