@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap');
 #Title{
     font-size: 3em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -57,7 +58,7 @@ body{
       text-decoration: underline;
       font-weight: 400;
     }
-    #symbols li{
+    .symbols li{
       display: flex;
       margin: 1em 0;
     }
@@ -487,6 +488,9 @@ body{
     font-weight: bold;
     margin: auto 1em;
   }
+  #test-page{
+    position: relative;
+  }
   #question-num{
     padding: 1em 0 1em 2em;
     background-color: rgb(226, 215, 215);
@@ -582,14 +586,14 @@ body{
   .notvisited2{
     width: 2.2em;
     height: 2.2em;
-    border: 0.25px solid grey;
+    border: 0.15px solid grey;
     background: white;
     border-radius: 5px;
     text-align: center;
   }
   .notanswered2{
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.4em;
+    height: 2.4em;
     border: none;
     background: red;
     border-radius: 0 0 25px 25px;  
@@ -597,8 +601,8 @@ body{
     color: white;
   }
   .answered2{
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.4em;
+    height: 2.4em;
     border: none;
     background: rgb(52, 221, 52);
     border-radius: 25px 25px 0 0;
@@ -606,8 +610,8 @@ body{
     color: white;
   }
   .review2{
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.4em;
+    height: 2.4em;
     border: none;
     background: blue;
     border-radius: 100px;
@@ -615,8 +619,8 @@ body{
     color: white;
   }
   .ansNreview2{
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.4em;
+    height: 2.4em;
     border: none;
     background: indigo;
     border-radius: 100px;
@@ -667,4 +671,72 @@ body{
     cursor:pointer;
     color: white;
     background-color: green;
+  }
+
+  /* INSTRUCTIONS2 */
+  #instructions2{
+    height: 90vh;
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+    position: absolute;
+    z-index:10;
+    top:5%;
+    left: 5%;
+    background-color: whitesmoke;
+  }
+  #instructionsClose{
+    background: orange;
+    font-weight: bold;
+    color: white;
+    padding: 0.25em 0.5em;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    position: fixed;
+  }
+  #instructionsClose:hover{
+    cursor: pointer;
+    background-color: red;
+  }
+  #instructionsBlock{
+    overflow: auto;
+    margin-top: 3em;
+    height: 70vh;
+  }
+  #questions{
+    height: 90vh;
+    width: 90vw;
+    margin-left:auto;
+    margin-right: auto;
+    position: absolute;
+    z-index:10;
+    top:5%;
+    left: 5%;
+    background-color: whitesmoke;
+    padding: 1em;
+  }
+  #questionsClose{
+    background: orange;
+    font-weight: bold;
+    color: white;
+    padding: 0.25em 0.5em;
+    margin-left: 5px;
+    margin-top: 10px;
+    border: none;
+    position: fixed;
+  }
+  #questionsClose:hover{
+    cursor: pointer;
+    background-color: red;
+  }
+  #questionBlock{
+    margin-top: 3em;
+    overflow: auto;
+    height: 70vh;
+  }
+  .closeBtn{
+    height: 3em;
+    display: flex;
+    justify-content: center;
   }
