@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap');
+body{
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+}
 #Title{
     font-size: 3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins';
     text-align: center;
     color: indigo;
 }
-#mainBtnGroup h3{
+#mainBtnGroup h5{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     color: indigo;
@@ -15,25 +20,41 @@
 }
 .btn-categories{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #mainBtnGroup button{
+    height: fit-content;
+    width: 6em;
     background: indigo;
     color: white;
     border: none;
-    margin: 1em;
+    margin: 0.5em;
 }
 #mainBtnGroup button:hover{
     background: white;
     color: indigo;
     cursor: pointer;
-    box-shadow: 0 0 2px indigo;
+    box-shadow: 0 0 3px indigo;
 }
-body{
-    font-family: verdana;
-    margin: 0;
-    padding: 0;
-  }
+.btn-style{
+  height: auto;
+  width: fit-content;
+  background: indigo;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 5px;
+}
+.btn-style:hover{
+  background: white;
+  color: indigo;
+  cursor: pointer;
+  box-shadow: 0 0 3px indigo;
+}
   /* Instructions page */
   .arrow{
       color: blue;

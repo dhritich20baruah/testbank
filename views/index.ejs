@@ -49,56 +49,245 @@
         </div>
       </div>
     </nav>
-    
+
     <div id="Title">Welcome to Test Champ</div>
-    <div class="container">
+    <div class="container-fluid my-5">
       <div class="row">
-        <div class="col-sm-9">col-sm-8</div>
-        <div class="col-sm-3">
-          <div id="mainBtnGroup">
-            <h3>JEE MAINS</h3>
-            <div class="btn-categories">
-              <a href="/jeemains/jeemain2021s1">
-                <button class="btn">2021 SHIFT-1</button>
-              </a>
-              <a href="/jeemains/jeemain2021s2">
-                <button class="btn">2021 SHIFT-2</button>
-              </a>
-            </div>
-            <h3>JEE ADVANCED</h3>
-            <div class="btn-categories">
-              <a href="/jeeadv/jeeadv2021paper1">
-                <button class="btn">2021 Paper 1</button>
-              </a>
-              <a href="/jeeadv/jeeadv2021paper2">
-                <button class="btn">2021 Paper 2</button>
-              </a>
-              <a href="/jeeadv/jeeadv2020paper1">
-                <button class="btn">2020 Paper 1</button>
-              </a>
-              <a href="/jeeadv/jeeadv2020paper2">
-                <button class="btn">2020 Paper 2</button>
-              </a>
-            </div>
-            <h3>RRB PO</h3>
-            <div class="btn-categories">
-              <a href="/ibpsrrb/rrbClerkPrelims2020">
-                <button class="btn">RRB Clerk Prelims 2020</button>
-              </a>
-            </div>
-            <h3>RRB CLERICAL</h3>
-            <div class="btn-categories">
-              <a href="#">
-                <button class="btn">JEE Advanced</button>
-              </a>
-            </div>
-            <h3>IBPS PO</h3>
-            <div class="btn-categories">
-              <a href="#">
-                <button class="btn">JEE Advanced</button>
-              </a>
+        <div class="col-sm-9">
+          <h3 class="text-center">JOBS</h3>
+          <div class="card mb-3" style="max-width: 90%">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="..." class="img-fluid rounded-start" alt="..." />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="col-sm-3">
+          <h3 class="text-center">Mock Test</h3>
+          <button class="btn btn-primary" style="width: fit-content">
+            All mock tests >>
+          </button>
+
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    IBPS PO
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                      <a href="/ibpsrrb/rrbClerkPrelims2020">
+                        <button class="btn-style">RRB Clerk Prelims 2020</button>
+                      </a>
+                      <a href="/ibpsrrb/rrbClerkPrelims2020">
+                        <button class="btn-style">RRB Clerk Prelims 2020</button>
+                      </a>
+                      <a href="/ibpsrrb/rrbClerkPrelims2020">
+                        <button class="btn-style">RRB Clerk Prelims 2020</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    IBPS Clerical
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    RRB Clerical
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    RRB PO
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                        <a href="/ibpsrrb/rrbClerkPrelims2020">
+                          <button class="btn-style">RRB Clerk Prelims 2020</button>
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    JEE MAINS
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                        <a href="/jeemains/jeemain2021s1">
+                          <button class="btn-style">2021 SHIFT-1</button>
+                        </a>
+                        <a href="/jeemains/jeemain2021s2">
+                          <button class="btn-style">2021 SHIFT-2</button>
+                        </a>
+                      </div>
+                </div>
+              </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
+                    JEE ADVANCED
+                  </button>
+                </h2>
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingSix"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <div class="btn-categories">
+                        <a href="/jeeadv/jeeadv2021paper1">
+                            <button class="btn-style">2021 Paper 1</button>
+                          </a>
+                          <a href="/jeeadv/jeeadv2021paper2">
+                            <button class="btn-style">2021 Paper 2</button>
+                          </a>
+                          <a href="/jeeadv/jeeadv2020paper1">
+                            <button class="btn-style">2020 Paper 1</button>
+                          </a>
+                          <a href="/jeeadv/jeeadv2020paper2">
+                            <button class="btn-style">2020 Paper 2</button>
+                          </a>
+                </div>
+              </div>
+              </div>
+            </div>
+          
         </div>
       </div>
     </div>
