@@ -3,6 +3,7 @@ const marked = require('marked');
 const createDomPurify = require('dompurify')
 const { JSDOM } = require('jsdom')
 const dompurify = createDomPurify(new JSDOM().window)
+const slugify = require('slugify')
 
 const jobSchema = new mongoose.Schema({
     jobTitle: {
@@ -13,9 +14,20 @@ const jobSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    jobLink: {
+        type: String,
+    },
     jobDetails: {
         type: String, 
-        requires: true
+        required: true
+    },
+    jobCategory: {
+        type: String, 
+        required: true
+    },
+    jobImage:{
+        type: String,
+        required: true
     },
     createdAt: {
         type: Date,
@@ -23,7 +35,6 @@ const jobSchema = new mongoose.Schema({
     },
     sanitizedHtml: {
         type: String,
-        required: true
     }
 })
 

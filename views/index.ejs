@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %> <%- include('./partials/boot.ejs') %>
+  <%- include('./partials/head.ejs') %>
+   <%- include('./partials/boot.ejs') %>
 
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
@@ -29,7 +30,7 @@
               <a class="nav-link" href="#">Mock Test</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Jobs</a>
+              <a class="nav-link" href="/job/">Jobs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Admission</a>
@@ -58,26 +59,26 @@
       <div class="row">
         <div class="col-sm-9">
           <h3 class="text-center">JOBS</h3>
-          <div class="card mb-3" style="max-width: 90%">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="..." class="img-fluid rounded-start" alt="..." />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
+          <% job.slice(0,10).forEach(job=> { %>
+            <div class="card mb-3" style="max-width: 90%">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="..." class="img-fluid rounded-start" alt="..." />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= job.jobTitle %></h5>
+                    <p class="card-text">
+                      <%= job.jobSnippet %>
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted"><%= job.createdAt.toLocaleDateString() %></small>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <% }) %>
         </div>
         <div class="col-sm-3">
           <h3 class="text-center">Mock Test</h3>

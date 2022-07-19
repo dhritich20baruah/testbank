@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %> <%- include('./partials/boot.ejs') %>
+
+  <body>
+    <section class="container">
+      <form action="/job/job-add" method="POST">
+        <div class="mb-3">
+          <label for="jobTitle" class="form-label"
+            >Job Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="Job Title" name="jobTitle"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobSnippet" class="form-label"
+            >Job Snippet</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="jobSnippet"
+            placeholder="Job Snippet" name="jobSnippet"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobLink" class="form-label"
+            >Job Link</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="jobLink"
+            placeholder="Job Link" name="jobLink"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobImage" class="form-label"
+            >Job Image</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="jobImage"
+            placeholder="Job Image" name="jobImage"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobCategory" class="form-label"
+            >Job Category</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="jobCategory"
+            placeholder="Job Category" name="jobCategory"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobDetails" class="form-label">Job Description</label>
+          <textarea class="form-control" id="jobDetails" rows="3" name="jobDetails"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary"/>
+      </form>
+    </section>
+    <section class="container my-5">
+        <% job.slice(0,10).forEach(job=> { %>
+      <div class="card mb-3" style="max-width: 90%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= job.jobTitle %></h5>
+              <p class="card-text">
+                <%= job.jobSnippet %>
+              </p>
+              <p class="card-text">
+                <small class="text-muted"><%= job.createdAt.toLocaleDateString() %></small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </section>
+    <script src="/static/editor/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("jobDetails");
+    </script>
+  </body>
+</html>
