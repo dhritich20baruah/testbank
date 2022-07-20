@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %> <%- include('./partials/boot.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="row container-fluid">
+        <div class="col-md-9 ml-3 p-5">
+            <div class="detailsContent">
+                <h2 class="fs-2"><%= job.jobTitle %></h2>
+                <p class="text-danger"><%= job.createdAt.toLocaleDateString() %></p>
+                <div class="content">
+                    <p id="desc"><%= job.jobDetails %></p>
+                </div>
+                <input type="text" id="htmldetails" value="<%= job.jobDetails %>" style="display: none">
+            </div>
+        </div>
+        <div class="col-6 col-md-3 border border-primary shadow mt-5">
+            <h3 class="text-dark text-center my-3">Trending jobs</h3>
+            <% jobs.slice(0,6).forEach(job=> { %> 
+              <a href="/job/jobs/<%= job._id%>" class="text-decoration-none">
+                <p class="mx-3 text-dark" style="text-decoration: none">>><%= job.jobTitle %></p>
+                <hr class="text-white"> 
+              </a>
+              <% }) %> 
+        </div>
+      </div>
+
+</body>
+<script>
+    let desc = document.getElementById("desc");
+    let htmldetails = document.getElementById('htmldetails').value
+    desc.innerHTML = htmldetails
+</script>
+</html>

@@ -8,26 +8,21 @@ const slugify = require('slugify')
 const jobSchema = new mongoose.Schema({
     jobTitle: {
         type: String,
-        required: true
     },
     jobSnippet: {
         type: String,
-        required: true
     },
     jobLink: {
         type: String,
     },
     jobDetails: {
         type: String, 
-        required: true
     },
     jobCategory: {
         type: String, 
-        required: true
     },
     jobImage:{
         type: String,
-        required: true
     },
     createdAt: {
         type: Date,
