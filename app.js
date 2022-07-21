@@ -38,13 +38,13 @@ app.get("/home", (req, res) => {
 const jeemains = require('./routes/jeemain')
 const jeeadv = require('./routes/jeeadv')
 const ibpsrrb = require('./routes/ibpsrrb')
-var authRouter = require('./routes/auth')
+var auth = require('./routes/auth')
 var newjob = require('./routes/newjob')
 
 app.use('/jeemains', jeemains)
 app.use('/jeeadv', jeeadv)
 app.use('/ibpsrrb', ibpsrrb)
-app.use('/auth', authRouter)
+app.use('/auth', auth)
 app.use('/job', newjob)
 
 

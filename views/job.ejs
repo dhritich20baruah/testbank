@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head.ejs') %> <%- include('./partials/boot.ejs') %>
+  <%- include('./partials/head.ejs') %>
+   <%- include('./partials/boot.ejs') %>
 
   <body>
-    <section class="container">
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="container my-3">
       <form action="/job/job-add" method="POST">
         <div class="mb-3">
           <label for="jobTitle" class="form-label">Job Title</label>
