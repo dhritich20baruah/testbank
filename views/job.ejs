@@ -7,6 +7,9 @@
     <%- include('./partials/nav.ejs') %>
 
     <section class="container my-3">
+      <form action="/auth/logout" method="post">
+        <button class="logout" type="submit">Sign out</button>
+      </form>
       <form action="/job/job-add" method="POST">
         <div class="mb-3">
           <label for="jobTitle" class="form-label">Job Title</label>
@@ -60,26 +63,32 @@
       </form>
     </section>
     <section class="container my-5">
-        <% job.slice(0,10).forEach(job=> { %>
-      <div class="card mb-3" style="max-width: 90%">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title"><%= job.jobTitle %></h5>
-              <p class="card-text">
-                <%= job.jobSnippet %>
-              </p>
-              <p class="card-text">
-                <small class="text-muted"><%= job.createdAt.toLocaleDateString() %></small>
-              </p>
+      <h3 class="text-center">JOBS</h3>
+      <% job.slice(0,10).forEach(job=> { %>
+        <a href="/job/jobs/<%= job._id%>" class="single text-decoration-none">
+        <div class="card mb-3 shadow my-4" style="max-width: 90%">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div id="jobImage" class="text-light h-100 d-flex justify-content-center align-items-center fw-bold display-5" style="background: linear-gradient(to bottom right, #0d6efd, rgb(255, 17, 0))"><%= job.jobImage %></div>
+            </div>
+            <div class="col-md-8 text-dark">
+              <div class="card-body">
+                <h5 class="card-title"><%= job.jobTitle %></h5>
+                <p class="card-text">
+                  <%= job.jobSnippet %>
+                </p>
+                <p class="card-text">
+                  <span class="">Last updated: <%= job.createdAt.toLocaleDateString() %> </span> |
+                  Category: <strong><%= job.jobCategory %></strong>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <% }) %>
+        </a>
+        <form action="/job/delete/<%= job.id%>" method="POST"><button type="submit" class="btn btn-danger">DELETE</button></form>
+        <a href="/job/edit/<%= job.id %>"><button class="btn btn-warning">EDIT</button></a>
+        <% }) %>
     </section>
     <script src="/static/editor/ckeditor.js"></script>
     <script>

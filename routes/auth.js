@@ -1,51 +1,52 @@
-var express = require('express')
-var router = express.Router()
-var passport  = require('passport')
-var LocalStrategy = require("passport-local")
-var crypto = require('crypto')
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs');
+const passport = require('passport');
+// Load User model
+const User = require('../models/Users');
+const { forwardAuthenticated } = require('../config/auth');
 
-const User = require('../models/Users')
+// Login Page
+router.get('/login', forwardAuthenticated, (req, res) => res.render('login'));
 
-const bodyParser = require('body-parser')
+// Register Page
+router.get('/register', forwardAuthenticated, (req, res) => res.render('register'));
 
-router.use(bodyParser.json())
-
-router.get('/register', function(req, res, next){
-  res.render('register')
-})
-
-router.post('/register', async (req, res)=>{
+router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
   const newUser = await new User({
-      name, email, password
+    name, email, password
+  });
+  bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.hash(newUser.password, salt, (err, hash) => {
+      if (err) throw err;
+      newUser.password = hash;
+      newUser.save()
+        .then(user => {
+          res.redirect('/auth/login');
+        })
+        .catch(err => console.log(err));
+    })
   })
-  newUser.save((err, User) => {
-      if (err) {
-          console.log(err)
-      }
-      res.redirect('/auth/login')
-  })
-  console.log(newUser)
 })
 
+//Login
+router.post('/login', (req, res, next) => {
+  passport.authenticate('local', {
+    successRedirect: '/job/',
+    failureRedirect: '/',
+    failureFlash: true
+  })(req, res, next);
+});
 
-// passport.use(new LocalStrategy(function verify(username, password, cb){
-//     db.get('SELECT * FROM users WHERE username = ?', [ username ], function(err, row){
-//         if (err) { return cb(err); }
-//         if (!row) { return cb(null, false, { message: "Incorect username or password"});}
+// Logout
+router.post('/logout', function(req, res, next) {
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/');
+  });
+});
 
-//         crypto.pbkdf2(password, row.salt, 310000, 32, 'sha256', function(err, hashedPassword) {
-//             if (err) { return cb(err); }
-//             if (!crypto.timingSafeEqual(row.hashed_password, hashedPassword)) {
-//               return cb(null, false, { message: 'Incorrect username or password.' });
-//             }
-//             return cb(null, row);
-//           });
-//     })
-// }))
 
-router.get('/login', function(req, res, next){
-    res.render('login')
-})
 
 module.exports = router;

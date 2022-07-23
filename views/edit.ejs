@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+   <%- include('./partials/boot.ejs') %>
+
+  <body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="container my-3">
+      <form action="/auth/logout" method="post">
+        <button class="logout" type="submit">Sign out</button>
+
+      </form>
+      <form action="/jobs/<%= job._id %>" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="mb-3">
+          <label for="jobTitle" class="form-label">Job Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="Job Title" name="jobTitle" value="<%= job.jobTitle%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobSnippet" class="form-label">Job Snippet</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobSnippet"
+            placeholder="Job Snippet" name="jobSnippet" value="<%= job.jobSnippet%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobLink" class="form-label">Job Link</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobLink"
+            placeholder="Job Link" name="jobLink" value="<%= job.jobLink%>"/>
+        </div>
+        <div class="mb-3">
+          <label for="jobImage" class="form-label">Job Image</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobImage"
+            placeholder="Job Image" name="jobImage" value="<%= job.jobImage%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobCategory" class="form-label">Job Category</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobCategory"
+            placeholder="Job Category" name="jobCategory" value="<%= job.jobCategory%>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="jobDetails" class="form-label">Job Description</label>
+          <textarea class="form-control" id="jobDetails" rows="3" name="jobDetails"><%= job.jobDetails%></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary"/>
+      </form>
+    </section>
+    <script src="/static/editor/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("jobDetails");
+    </script>
+  </body>
+</html>
